@@ -13,3 +13,4 @@ Change the brand here once and every page, email and course screen picks it up.
 
 - `brand-guidelines.md` — name, tagline, voice (do / don't), colours, fonts, logo usage
 - `tokens.json` — the same colours and fonts in a format code can read
+- `voice.md` — how we sound, in full: who's talking, personality, words we use and avoid, before/after examples, tweaks per channel. Written by `/brand-voice`. `brand-guidelines.md` keeps a short voice summary that points here.

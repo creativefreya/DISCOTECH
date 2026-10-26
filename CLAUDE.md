@@ -24,10 +24,20 @@ Each round adds a row. Keep this table current: it's the first thing any new AI 
 
 Every file here is context for everything after it.
 
-1. **Read before you write.** Before building anything, read `company/case-file.md`, every file in `packages/icp/personas/`, and `packages/brand/brand-guidelines.md` (whichever exist yet), plus the `CLAUDE.md` of the folder you're working in.
+1. **Read before you write.** Before building anything, read `company/case-file.md`, every file in `packages/icp/personas/`, `packages/brand/brand-guidelines.md` and `packages/brand/voice.md` (whichever exist yet), plus the `CLAUDE.md` of the folder you're working in.
 2. **Write it down.** Every decision goes into a markdown file in the folder that owns it. If it isn't in a file, the next session won't know it.
 3. **Markdown wins.** If an app disagrees with a markdown file, fix the markdown first, then rebuild the app.
 4. **Update the glance table** above when a round finishes.
+
+## Filling the gaps (how skills ask questions)
+
+The skills here aren't written for one business. They work out the details from your files, and ask you only for what's missing. Every skill follows these steps:
+
+1. **Look first.** List what the skill needs to know. Find each answer in the files above, or in `votes/round-N.json` for that round. Never ask for something a file already says.
+2. **If the room has voted, don't ask.** If that round's votes file exists, or the person says "quick" or "you pick", don't ask anything. Make a sensible choice from what's in the files, and mark it `_(assumed — change me)_` where you write it down.
+3. **Otherwise, ask only for what's missing.** At most 3 questions per message, in plain words. Give 2–4 suggested answers based on what you already know, so the person can just pick one. "You pick" is always a valid answer.
+4. **Save answers in the right file, straight away.** Each answer goes into the file that owns it (a voice answer goes in `packages/brand/voice.md`, a customer detail in the persona). Then the next skill won't ask again. If an answer contradicts a file, update the file.
+5. **Never make up facts.** Prices, testimonials, client results, qualifications, contact details, statistics and legal or medical claims come from the person or stay as a visible `[TODO: …]`. Placeholder copy is fine. Fake proof is not.
 
 ## Where things live
 
@@ -48,6 +58,8 @@ Every file here is context for everything after it.
 | Skill | What it does |
 |---|---|
 | `/preflight` | Checks your laptop is ready (git, Node, this repo). Run it before the event. |
+| `/brand-voice` | Asks how the business should sound, then writes `packages/brand/voice.md`. Every page, email and post reads it. |
+| `/lead-magnet` | Turns a topic into a free resource page that asks for an email to unlock the rest. Writes `departments/marketing/lead-magnet.md` and `apps/lead-magnet/`. |
 
 More skills arrive on the day: run `git pull` at the start of the talk.
 

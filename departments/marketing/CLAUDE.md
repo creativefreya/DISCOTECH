@@ -11,5 +11,6 @@
 
 - `website.md` — page structure, headline the room picked, copy decisions (built page: `apps/landing/`)
 - `lead-magnet.md` — the free resource, who it's for, what it promises (built page: `apps/lead-magnet/`)
+- `lead-magnets/{slug}.md` — any extra lead magnets after the first (built page: `apps/lead-magnet/{slug}/`)
 
 After the talk this folder is where LinkedIn posts, ads and new lead magnets go, all starting from the personas and brand.
