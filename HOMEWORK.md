@@ -12,7 +12,7 @@ Open this folder in Claude Code and copy the prompt for each step. Claude does t
 | 1 | Checks nothing is about to leak | `/security-check` | free |
 | 2 | Puts the website online | Netlify **or** Cloudflare Pages | free plan |
 | 3 | Saves real leads in a database | Neon | free plan |
-| 4 | Sends the welcome emails (optional) | Resend | free plan |
+| 4 | Sends the welcome emails (optional) | Resend (plus its package, `npm install resend`) | free plan |
 | 5 | Takes real payments | Stripe | no monthly fee; Stripe takes a cut of each sale |
 
 ## The one rule: keys stay secret
@@ -77,8 +77,17 @@ Make a free account and a project, then ask Claude:
 
 Resend (https://resend.com) sends the welcome sequence from `departments/emails/welcome-sequence/` to each new lead.
 
+1. Make a free account and create an API key (Resend dashboard → API Keys). Don't paste it anywhere yet.
+2. Your project needs the **Resend package** installed: the bit of code that talks to Resend. It needs Node.js, which `/preflight` already checked. Claude can install it, or you can run it yourself:
+
+```bash
+npm install resend
 ```
-Connect the welcome sequence to Resend so each new lead gets email 1 straight away. Put the key in .env and the hosting dashboard, never in the code. Tell me what I need to set up to send from my own domain.
+
+3. Ask Claude:
+
+```
+Connect the welcome sequence to Resend so each new lead gets email 1 straight away. Install the Resend package if it isn't there yet (ask me first). Tell me which line of .env and which hosting dashboard setting to paste my API key into, never in the code. Then tell me what I need to set up to send from my own domain.
 ```
 
 **It worked when** you sign up again and the welcome email arrives.
