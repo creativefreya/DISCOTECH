@@ -14,6 +14,5 @@ ICP = ideal customer profile. Three personas, because later rounds need differen
 - `personas/client.md` — the person who hires us (shaped by the room's votes)
 - `personas/referral-partner.md` — people who send us clients
 - `personas/student.md` — someone who wants to learn to do what we do (feeds the course)
-- `interview-notes/` — what real customers said, one file per call (after the talk)
 
 Each persona covers: who they are, their situation, what keeps them up at 2am, what they've tried, words they use, what would make them say yes, where to find them.

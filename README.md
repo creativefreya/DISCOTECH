@@ -61,7 +61,7 @@ Skills for the rounds land on the day via `git pull`.
 CLAUDE.md            ← the business's memory: AI reads this first
 TODO.md              ← what's next, for everyone
 company/             ← what the business is (Round 1)
-customers/           ← who we serve: personas/, interview-notes/ (Round 2)
+customers/           ← who we serve: personas/ (Round 2)
 brand/               ← how we look and sound (Round 3)
 departments/
   marketing/         ← website plan (Round 4), lead-magnets/ (Round 6)
