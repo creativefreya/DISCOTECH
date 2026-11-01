@@ -39,7 +39,7 @@ Right now this folder is a copy of Freya's repo, so you can't save your changes 
 Make this folder my own repo. Create a new PRIVATE GitHub repo for it, point this folder at it instead of Freya's, and push. Run /security-check before you push.
 ```
 
-**Keep it private.** Once real people sign up, your leads list holds their names and emails.
+**Keep it private.** Your leads file (`departments/crm/leads.csv`) is already set up to stay off GitHub, but a private repo is the safer default for a real business.
 
 ## Step 1 · Check it's safe
 
