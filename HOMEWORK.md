@@ -56,7 +56,7 @@ Pick **one**: Netlify (https://www.netlify.com) or Cloudflare Pages (https://pag
 Make an account, then ask Claude:
 
 ```
-Put apps/website/ online with [Netlify / Cloudflare Pages]. Connect it to my GitHub repo so every push updates the site. Include the lead magnet pages in departments/marketing/lead-magnets/. Walk me through any clicks I need to do in the dashboard.
+Put products/website/ online with [Netlify / Cloudflare Pages]. Connect it to my GitHub repo so every push updates the site. Include the lead magnet pages in departments/marketing/lead-magnets/. Walk me through any clicks I need to do in the dashboard.
 ```
 
 **It worked when** you can open the site on your phone, and the buttons between the pages still work.

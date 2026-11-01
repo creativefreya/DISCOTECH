@@ -1,6 +1,6 @@
-# Apps — the things people actually see
+# Products — what we make and sell, and the pages people see
 
-Built from the markdown in `company/`, `customers/`, `brand/` and `departments/`. If an app and a markdown file disagree, the markdown wins: fix the doc, then rebuild the app.
+Built from the markdown in `company/`, `customers/`, `brand/` and `departments/`. If a product and a markdown file disagree, the markdown wins: fix the doc, then rebuild the product.
 
 | Folder | Built in | Plan lives in |
 |---|---|---|

@@ -46,8 +46,8 @@ The skills here aren't written for one business. They work out the details from 
 | What the business is, the problem, how it makes money | `company/` | 1 |
 | Who the customers are (personas) | `customers/` | 2 |
 | Name, colours, fonts, voice | `brand/` | 3 |
-| Website, social posts, ads | `departments/marketing/` + `apps/website/` | 4 |
-| What we sell (the offer, the course) | `departments/sales/`, `departments/content/` + `apps/course/` | 5 |
+| Website, social posts, ads | `departments/marketing/` + `products/website/` | 4 |
+| What we sell (the offer, the course) | `departments/sales/`, `departments/content/` + `products/course/` | 5 |
 | Lead magnets | `departments/marketing/lead-magnets/` | 6 |
 | Leads, contacts, where they came from | `departments/crm/` | 7 |
 | Email templates and sequences | `departments/emails/` | 8 |

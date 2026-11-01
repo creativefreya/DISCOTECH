@@ -44,9 +44,9 @@ Here, every department is a folder. Every decision is a markdown file. Each roun
 |---|---|---|---|
 | 1 | The pain point | `/pain-point` | `company/business.md` |
 | 2 | Who it's for | `/customer-profile` | `customers/personas/customer.md`, `referral-partner.md`, `student.md` |
-| 3 | Something to Sell | `/course-platform` | `departments/sales/offer.md` (+ `departments/content/`, `apps/course/` if it's a course) |
+| 3 | Something to Sell | `/course-platform` | `departments/sales/offer.md` (+ `departments/content/`, `products/course/` if it's a course) |
 | 4 | Name That Brand | `/brand-kit` + `/brand-voice` | `brand/brand-guidelines.md`, `design-tokens.json`, `voice.md` |
-| 5 | Front Door | `/landing-page` | `departments/marketing/website.md`, `apps/website/` |
+| 5 | Front Door | `/landing-page` | `departments/marketing/website.md`, `products/website/` |
 | 6 | The Bait | `/lead-magnet` | `departments/marketing/lead-magnets/` |
 | 7 | The Little Black Book | `/crm-connect` | `departments/crm/leads.csv` |
 | 8 | You've Got Mail | `/email-sequence` | `departments/emails/welcome-sequence/` |
@@ -70,7 +70,7 @@ departments/
   crm/               ← every lead, and where they came from (Round 7)
   emails/            ← what we send (Round 8)
   automation/        ← agents that run it, after the talk
-apps/                ← the pages people actually see: website/, course/
+products/            ← what we make and sell, and the pages people see: website/, course/
 votes/               ← what the room voted, per round
 ```
 

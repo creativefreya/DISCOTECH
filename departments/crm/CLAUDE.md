@@ -7,7 +7,7 @@ One record per person, from first form fill to paying customer. Every form on ev
 
 | Reads from | Feeds into |
 |---|---|
-| Forms on `apps/website/` and `departments/marketing/lead-magnets/`, personas (for the `source` / segment fields) | Emails, sales |
+| Forms on `products/website/` and `departments/marketing/lead-magnets/`, personas (for the `source` / segment fields) | Emails, sales |
 
 ## Files (after Round 7)
 

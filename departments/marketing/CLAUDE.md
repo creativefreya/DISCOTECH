@@ -9,7 +9,7 @@
 
 ## Files
 
-- `website.md` — page structure, headline the room picked, copy decisions (built page: `apps/website/`)
+- `website.md` — page structure, headline the room picked, copy decisions (built page: `products/website/`)
 - `lead-magnets/{slug}.md` — each free resource: who it's for, what it promises
 - `lead-magnets/{slug}.html` — the built page, next to its plan
 

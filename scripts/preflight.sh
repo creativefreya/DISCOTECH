@@ -60,7 +60,7 @@ fi
 # 6. Folder structure intact
 if [ -n "$repo_root" ]; then
   missing=""
-  for d in company customers brand departments/marketing departments/sales departments/content departments/crm departments/emails apps votes; do
+  for d in company customers brand departments/marketing departments/sales departments/content departments/crm departments/emails products votes; do
     [ -d "$d" ] || missing="$missing $d"
   done
   if [ -z "$missing" ]; then

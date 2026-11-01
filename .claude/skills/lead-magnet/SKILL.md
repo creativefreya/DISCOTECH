@@ -39,7 +39,7 @@ What you need, and where it usually comes from:
 | Who it's for | the customer persona | "Which customer is this for?" (offer the personas you found) |
 | Topic and format | `votes/round-6.json` | Suggest 3 ideas based on the persona's 2am worry, each in a different format: checklist / template / question bank / quiz / short guide. Let them pick. |
 | The one promise | the business file + persona | "After using this, they'll be able to ___." Suggest 2 options. |
-| Next step after reading | the business file / offer | "Where should readers go next: book a call, visit the website, or buy something?" plus the link. If there's no link yet, use `../../../apps/website/index.html`, or `#` with a `[TODO: link]`. |
+| Next step after reading | the business file / offer | "Where should readers go next: book a call, visit the website, or buy something?" plus the link. If there's no link yet, use `../../../products/website/index.html`, or `#` with a `[TODO: link]`. |
 | Brand and voice | brand files | If neither exists: offer to run `/brand-voice` quickly, or carry on with the neutral template and say so. |
 
 If the room has voted (`votes/round-6.json` exists), or the person says "quick": don't ask. Pick from the files, then go to step 3.

@@ -7,7 +7,7 @@ The online course: teaching other people to do what this business does.
 
 | Reads from | Feeds into |
 |---|---|
-| `customers/personas/student.md`, brand, `votes/round-3.json` (the room's module ideas) | `apps/course/`, the offer in `departments/sales/` |
+| `customers/personas/student.md`, brand, `votes/round-3.json` (the room's module ideas) | `products/course/`, the offer in `departments/sales/` |
 
 ## Files
 
