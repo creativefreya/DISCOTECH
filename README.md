@@ -74,6 +74,10 @@ apps/                ← the pages people actually see: website/, course/
 votes/               ← what the room voted, per round
 ```
 
+## After the show: homework
+
+Everything you build in the gameshow runs on your laptop. [HOMEWORK.md](HOMEWORK.md) connects it to the real world: hosting (Netlify or Cloudflare), a database (Neon), emails (Resend) and payments (Stripe).
+
 ## Want to take it further?
 
 - **Got a business or an idea you want to run with AI?** [Book a free intro call with Freya](https://calendar.app.google/4KvK9MxbF5WkVN3g8). Talk it through and see a demo of the Company OS web app.

@@ -70,3 +70,4 @@ More skills arrive on the day: run `git pull` at the start of the talk.
 
 - Secrets (API keys, passwords) go in `.env` only. It's gitignored. Never paste a real key into any other file.
 - Following along needs **no** API keys: leads, emails and checkout all run locally.
+- Connecting real services comes after the show, in `HOMEWORK.md`. Keys from those services go in `.env` and the hosting dashboard, never in page code. Don't ask for a key in chat: tell the person which line of `.env` to paste it into.
