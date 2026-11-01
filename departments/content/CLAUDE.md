@@ -1,13 +1,13 @@
-# Content — Detective School
+# Content — the course
 
-**Filled in by:** Round 8 "Detective School" (`/course-platform`)
-**Status:** empty until Round 8
+**Filled in by:** Round 5 "Something to Sell" (`/course-platform`)
+**Status:** empty until Round 5 (only used if the product is a course)
 
 The online course: teaching other people to do what this business does.
 
 | Reads from | Feeds into |
 |---|---|
-| `personas/student.md`, brand, `votes/round-8.json` (the room's module ideas) | `apps/course/`, the offer in `departments/sales/` |
+| `customers/personas/student.md`, brand, `votes/round-5.json` (the room's module ideas) | `apps/course/`, the offer in `departments/sales/` |
 
 ## Files
 

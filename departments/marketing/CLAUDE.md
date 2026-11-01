@@ -1,6 +1,6 @@
 # Marketing — getting found
 
-**Filled in by:** Round 4 "Front Door" (`/landing-page`) and Round 5 "The Bait" (`/lead-magnet`)
+**Filled in by:** Round 4 "Front Door" (`/landing-page`) and Round 6 "The Bait" (`/lead-magnet`)
 **Status:** empty until Round 4
 
 | Reads from | Feeds into |
@@ -9,8 +9,8 @@
 
 ## Files
 
-- `website.md` — page structure, headline the room picked, copy decisions (built page: `apps/landing/`)
-- `lead-magnet.md` — the free resource, who it's for, what it promises (built page: `apps/lead-magnet/`)
-- `lead-magnets/{slug}.md` — any extra lead magnets after the first (built page: `apps/lead-magnet/{slug}/`)
+- `website.md` — page structure, headline the room picked, copy decisions (built page: `apps/website/`)
+- `lead-magnets/{slug}.md` — each free resource: who it's for, what it promises
+- `lead-magnets/{slug}.html` — the built page, next to its plan
 
 After the talk this folder is where LinkedIn posts, ads and new lead magnets go, all starting from the personas and brand.

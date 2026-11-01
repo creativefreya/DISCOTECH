@@ -1,6 +1,6 @@
 # An Unlikely Gameshow — build a business in under 90 minutes with AI
 
-Starter repo for Freya Stockman's talk at **Techella**. The room picks a business, votes on every big decision, and Claude Code builds it live: problem → customers → brand → website → lead magnet → CRM → emails → course → checkout.
+Starter repo for Freya Stockman's talk at **Techella**. The room picks a business, votes on every big decision, and Claude Code builds it live: pain point → customers → brand → website → product → lead magnet → CRM → emails → security → checkout.
 
 > 🎁 **A gift from Freya, workshop or not.** You don't need a Techella ticket to use this. Clone it, build your own business in it, and make it yours.
 
@@ -43,32 +43,34 @@ Here, every department is a folder. Every decision is a markdown file. Each roun
 | Round | Name | Skill | Writes |
 |---|---|---|---|
 | 1 | The Case | `/case-file` | `company/case-file.md` |
-| 2 | The Client | `/client-profile` | `packages/icp/personas/client.md`, `referral-partner.md`, `student.md` |
-| 3 | Name That Brand | `/brand-kit` | `packages/brand/brand-guidelines.md`, `tokens.json` |
-| 4 | Front Door | `/landing-page` | `departments/marketing/website.md`, `apps/landing/` |
-| 5 | The Bait | `/lead-magnet` | `departments/marketing/lead-magnet.md`, `apps/lead-magnet/` |
-| 6 | The Little Black Book | `/crm-connect` | `departments/crm/CLAUDE.md`, leads store |
-| 7 | You've Got Mail | `/email-sequence` | `packages/emails/welcome-sequence.md` |
-| 8 | Detective School | `/course-platform` | `departments/content/curriculum.md`, `apps/course/` |
-| 9 | Show Me the Money | `/checkout` | `departments/sales/offer.md` |
+| 2 | The Client | `/client-profile` | `customers/personas/client.md`, `referral-partner.md`, `student.md` |
+| 3 | Name That Brand | `/brand-kit` + `/brand-voice` | `brand/brand-guidelines.md`, `design-tokens.json`, `voice.md` |
+| 4 | Front Door | `/landing-page` | `departments/marketing/website.md`, `apps/website/` |
+| 5 | Something to Sell | `/course-platform` | `departments/sales/offer.md` (+ `departments/content/`, `apps/course/` if it's a course) |
+| 6 | The Bait | `/lead-magnet` | `departments/marketing/lead-magnets/` |
+| 7 | The Little Black Book | `/crm-connect` | `departments/crm/leads.csv` |
+| 8 | You've Got Mail | `/email-sequence` | `departments/emails/welcome-sequence/` |
+| 9 | Don't Get Robbed | `/security-check` | a report (nothing to commit) |
+| 10 | Show Me the Money | `/checkout` | the price in `departments/sales/offer.md`, buy button on the website |
 
-Skills for rounds 1–9 land on the day via `git pull`.
+Skills for the rounds land on the day via `git pull`.
 
 ## Folder structure
 
 ```
 CLAUDE.md            ← the business's memory: AI reads this first
+TODO.md              ← what's next, for everyone
 company/             ← what the business is (Round 1)
-packages/
-  icp/personas/      ← who we serve (Round 2)
-  brand/             ← how we look and sound (Round 3)
-  emails/            ← email templates (Round 7)
+customers/           ← who we serve: personas/, interview-notes/ (Round 2)
+brand/               ← how we look and sound (Round 3)
 departments/
-  marketing/         ← website + lead magnet plans (Rounds 4–5)
-  crm/               ← leads and contacts (Round 6)
-  content/           ← the course (Round 8)
-  sales/             ← the offer and checkout (Round 9)
-apps/                ← the pages people actually see
+  marketing/         ← website plan (Round 4), lead-magnets/ (Round 6)
+  sales/             ← the offer (Round 5) and price (Round 10)
+  content/           ← the course, if that's the product (Round 5)
+  crm/               ← every lead, and where they came from (Round 7)
+  emails/            ← what we send (Round 8)
+  automation/        ← agents that run it, after the talk
+apps/                ← the pages people actually see: website/, course/
 votes/               ← what the room voted, per round
 ```
 

@@ -1,11 +1,11 @@
 ---
 name: brand-voice
-description: Work out how this business should sound (who's talking, personality, words to use and avoid, before/after examples) by reading the repo and asking the founder only what's missing, then write packages/brand/voice.md for every page, email and post to follow. Use when the user says "brand voice", "tone of voice", "how should we sound", "voice guide", "make it sound like us", or invokes /brand-voice. Also run it when another skill needs a voice and packages/brand/voice.md doesn't exist yet.
+description: Work out how this business should sound (who's talking, personality, words to use and avoid, before/after examples) by reading the repo and asking the founder only what's missing, then write brand/voice.md for every page, email and post to follow. Use when the user says "brand voice", "tone of voice", "how should we sound", "voice guide", "make it sound like us", or invokes /brand-voice. Also run it when another skill needs a voice and brand/voice.md doesn't exist yet.
 ---
 
 # Brand voice — how this business sounds
 
-You're writing the voice guide every other skill reads before writing words: website, lead magnet, emails, posts, course. One file: `packages/brand/voice.md`.
+You're writing the voice guide every other skill reads before writing words: website, lead magnet, emails, posts, course. One file: `brand/voice.md`.
 
 Follow **Filling the gaps** in the root `CLAUDE.md`: look first, ask only for what's missing, save answers straight away, never make up facts.
 
@@ -14,10 +14,10 @@ Follow **Filling the gaps** in the root `CLAUDE.md`: look first, ask only for wh
 Read whichever of these exist:
 
 - `company/case-file.md` — what the business does, for whom
-- `packages/icp/personas/*.md` — who's reading, the words they use, what worries them
-- `packages/brand/brand-guidelines.md` — name, vibe, any voice notes from Round 3
-- `packages/brand/voice.md` — if it exists, you're **updating** it, not starting again
-- `votes/round-3.json` (brand vibe) and `votes/round-7.json` (email tone), if present
+- `customers/personas/*.md` — who's reading, the words they use, what worries them
+- `brand/brand-guidelines.md` — name, vibe, any voice notes from Round 3
+- `brand/voice.md` — if it exists, you're **updating** it, not starting again
+- `votes/round-3.json` (brand vibe) and `votes/round-8.json` (email tone), if present
 
 From those, fill in as much of the template below as you can. Note which parts are still blank.
 
@@ -47,16 +47,16 @@ At most 3 questions per message. Give 2–4 suggested answers for each, based on
 
 ## 4. Draft, test, adjust
 
-1. Write `packages/brand/voice.md` using the template below.
+1. Write `brand/voice.md` using the template below.
 2. Show the person **3 sample lines** in the new voice: a website headline, an email opening line, a social post hook. Base them on the real business.
 3. Ask: "More like this, or less like this? What would you change?" Adjust the file from their answer. One round is usually enough. Stop when they're happy, or after they say "you pick".
 
 ## 5. Connect it
 
-- If `packages/brand/brand-guidelines.md` exists, make sure its voice section is a short summary (3 traits + the formality level) that ends with `Full guide: packages/brand/voice.md`. Don't keep two full copies that can disagree.
-- Add or update the **Voice** row in the root `CLAUDE.md` "Business at a glance" table: the 3 traits, with source `packages/brand/voice.md`.
+- If `brand/brand-guidelines.md` exists, make sure its voice section is a short summary (3 traits + the formality level) that ends with `Full guide: brand/voice.md`. Don't keep two full copies that can disagree.
+- Add or update the **Voice** row in the root `CLAUDE.md` "Business at a glance" table: the 3 traits, with source `brand/voice.md`.
 
-## Template — `packages/brand/voice.md`
+## Template — `brand/voice.md`
 
 ```markdown
 # Voice — {business name}
@@ -65,7 +65,7 @@ At most 3 questions per message. Give 2–4 suggested answers for each, based on
 
 ## Who's talking
 - {I / we / we by default, I for personal stories} — {name, if it's a person}
-- Speaking to: {main persona in one line} → `packages/icp/personas/{file}.md`
+- Speaking to: {main persona in one line} → `customers/personas/{file}.md`
 - Reading level: {e.g. "age 13: short sentences, common words, active voice"}
 
 ## Personality
