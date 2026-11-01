@@ -1,7 +1,7 @@
 # Marketing — getting found
 
-**Filled in by:** Round 4 "Front Door" (`/landing-page`) and Round 6 "The Bait" (`/lead-magnet`)
-**Status:** empty until Round 4
+**Filled in by:** Round 5 "Front Door" (`/landing-page`) and Round 6 "The Bait" (`/lead-magnet`)
+**Status:** empty until Round 5
 
 | Reads from | Feeds into |
 |---|---|

@@ -4,8 +4,8 @@ Built from the markdown in `company/`, `customers/`, `brand/` and `departments/`
 
 | Folder | Built in | Plan lives in |
 |---|---|---|
-| `website/` | Round 4 | `departments/marketing/website.md` |
-| `course/` | Round 5 (if the product is a course) | `departments/content/curriculum.md` |
+| `website/` | Round 5 | `departments/marketing/website.md` |
+| `course/` | Round 3 (if the product is a course) | `departments/content/curriculum.md` |
 
 Lead magnet pages live next to their plans in `departments/marketing/lead-magnets/`.
 

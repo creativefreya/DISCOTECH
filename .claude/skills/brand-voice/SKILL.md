@@ -15,9 +15,9 @@ Read whichever of these exist:
 
 - `company/case-file.md` — what the business does, for whom
 - `customers/personas/*.md` — who's reading, the words they use, what worries them
-- `brand/brand-guidelines.md` — name, vibe, any voice notes from Round 3
+- `brand/brand-guidelines.md` — name, vibe, any voice notes from Round 4
 - `brand/voice.md` — if it exists, you're **updating** it, not starting again
-- `votes/round-3.json` (brand vibe) and `votes/round-8.json` (email tone), if present
+- `votes/round-4.json` (brand vibe) and `votes/round-8.json` (email tone), if present
 
 From those, fill in as much of the template below as you can. Note which parts are still blank.
 

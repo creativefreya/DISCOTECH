@@ -44,9 +44,9 @@ Here, every department is a folder. Every decision is a markdown file. Each roun
 |---|---|---|---|
 | 1 | The Case | `/case-file` | `company/case-file.md` |
 | 2 | The Client | `/client-profile` | `customers/personas/client.md`, `referral-partner.md`, `student.md` |
-| 3 | Name That Brand | `/brand-kit` + `/brand-voice` | `brand/brand-guidelines.md`, `design-tokens.json`, `voice.md` |
-| 4 | Front Door | `/landing-page` | `departments/marketing/website.md`, `apps/website/` |
-| 5 | Something to Sell | `/course-platform` | `departments/sales/offer.md` (+ `departments/content/`, `apps/course/` if it's a course) |
+| 3 | Something to Sell | `/course-platform` | `departments/sales/offer.md` (+ `departments/content/`, `apps/course/` if it's a course) |
+| 4 | Name That Brand | `/brand-kit` + `/brand-voice` | `brand/brand-guidelines.md`, `design-tokens.json`, `voice.md` |
+| 5 | Front Door | `/landing-page` | `departments/marketing/website.md`, `apps/website/` |
 | 6 | The Bait | `/lead-magnet` | `departments/marketing/lead-magnets/` |
 | 7 | The Little Black Book | `/crm-connect` | `departments/crm/leads.csv` |
 | 8 | You've Got Mail | `/email-sequence` | `departments/emails/welcome-sequence/` |
@@ -62,11 +62,11 @@ CLAUDE.md            ← the business's memory: AI reads this first
 TODO.md              ← what's next, for everyone
 company/             ← what the business is (Round 1)
 customers/           ← who we serve: personas/ (Round 2)
-brand/               ← how we look and sound (Round 3)
+brand/               ← how we look and sound (Round 4)
 departments/
-  marketing/         ← website plan (Round 4), lead-magnets/ (Round 6)
-  sales/             ← the offer (Round 5) and price (Round 10)
-  content/           ← the course, if that's the product (Round 5)
+  marketing/         ← website plan (Round 5), lead-magnets/ (Round 6)
+  sales/             ← the offer (Round 3) and price (Round 10)
+  content/           ← the course, if that's the product (Round 3)
   crm/               ← every lead, and where they came from (Round 7)
   emails/            ← what we send (Round 8)
   automation/        ← agents that run it, after the talk
