@@ -1,6 +1,6 @@
 ---
 name: lead-magnet
-description: Turn a topic into a free resource page (checklist, template, question bank, guide) for this business. Teaser up top, email form to unlock the rest, every signup tagged with where it came from. Uses the business's own brand, voice and personas, and asks only for what's missing. Use when the user says "lead magnet", "free resource", "freebie", "opt-in page", "gated guide", or invokes /lead-magnet. Round 6 "The Bait" at the gameshow.
+description: Turn a topic into a free resource page (checklist, template, question bank, guide) for this business. Teaser up top, email form to unlock the rest, every signup tagged with where it came from. Uses the business's own brand, voice and personas, and asks only for what's missing. Use when the user says "lead magnet", "free resource", "freebie", "opt-in page", "gated guide", or invokes /lead-magnet. Round 5 "The Bait" at the gameshow.
 ---
 
 # Lead magnet — the bait
@@ -27,8 +27,8 @@ Read whichever exist:
 - `brand/voice.md` — how to write. If it's missing, use the voice notes in `brand-guidelines.md`
 - `brand/brand-guidelines.md` + `brand/design-tokens.json` — name, colours, fonts
 - `departments/marketing/website.md` — the headline and promise, so the two pages match
-- `departments/crm/CLAUDE.md` — whether there's a lead endpoint yet (Round 7)
-- `votes/round-6.json` — the format the room picked
+- `departments/crm/CLAUDE.md` — whether there's a lead endpoint yet (Round 6)
+- `votes/round-5.json` — the format the room picked
 
 ## 2. Fill the gaps
 
@@ -37,12 +37,12 @@ What you need, and where it usually comes from:
 | Need | Usually from | If missing, ask |
 |---|---|---|
 | Who it's for | the customer persona | "Which customer is this for?" (offer the personas you found) |
-| Topic and format | `votes/round-6.json` | Suggest 3 ideas based on the persona's 2am worry, each in a different format: checklist / template / question bank / quiz / short guide. Let them pick. |
+| Topic and format | `votes/round-5.json` | Suggest 3 ideas based on the persona's 2am worry, each in a different format: checklist / template / question bank / quiz / short guide. Let them pick. |
 | The one promise | the business file + persona | "After using this, they'll be able to ___." Suggest 2 options. |
 | Next step after reading | the business file / offer | "Where should readers go next: book a call, visit the website, or buy something?" plus the link. If there's no link yet, use `../../../products/website/index.html`, or `#` with a `[TODO: link]`. |
 | Brand and voice | brand files | If neither exists: offer to run `/brand-voice` quickly, or carry on with the neutral template and say so. |
 
-If the room has voted (`votes/round-6.json` exists), or the person says "quick": don't ask. Pick from the files, then go to step 3.
+If the room has voted (`votes/round-5.json` exists), or the person says "quick": don't ask. Pick from the files, then go to step 3.
 
 ## 3. Write the plan
 

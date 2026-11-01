@@ -2,4 +2,4 @@
 
 One list for the whole business. Each round adds what it left unfinished, with the folder that owns it.
 
-- [ ] Round 1: pick the pain point → `company/business.md`
+- [ ] Round 1: pick the problem → `company/business.md` + `customers/personas/customer.md`

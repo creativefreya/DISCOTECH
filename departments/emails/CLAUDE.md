@@ -1,11 +1,11 @@
 # Emails
 
-**Filled in by:** Round 8 "You've Got Mail" (`/email-sequence`)
-**Status:** empty until Round 8
+**Filled in by:** Round 7 "You've Got Mail" (`/email-sequence`)
+**Status:** empty until Round 7
 
 | Reads from | Feeds into |
 |---|---|
-| Brand, `customers/personas/customer.md`, `departments/marketing/lead-magnets/`, `votes/round-8.json` | Sent to every new lead in the CRM |
+| Brand, `customers/personas/customer.md`, `departments/marketing/lead-magnets/`, `votes/round-7.json` | Sent to every new lead in the CRM |
 
 ## Files
 

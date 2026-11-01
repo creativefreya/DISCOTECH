@@ -1,11 +1,11 @@
 # Sales — show me the money
 
-**Filled in by:** Round 3 "Something to Sell" (the offer) and Round 10 "Show Me the Money" (`/checkout`)
-**Status:** empty until Round 3
+**Filled in by:** Round 2 "Something to Sell" (the offer) and Round 9 "Show Me the Money" (`/checkout`)
+**Status:** empty until Round 2
 
 | Reads from | Feeds into |
 |---|---|
-| Business file, personas, curriculum, `votes/round-3.json` (product), `votes/round-10.json` (price) | Checkout button on the website and course |
+| Business file, personas, curriculum, `votes/round-2.json` (product), `votes/round-9.json` (price) | Checkout button on the website and course |
 
 ## Files
 

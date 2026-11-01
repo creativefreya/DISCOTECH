@@ -44,15 +44,15 @@ The skills here aren't written for one business. They work out the details from 
 | If the task is about… | Folder | Round |
 |---|---|---|
 | What the business is, the problem, how it makes money | `company/` | 1 |
-| Who the customers are (personas) | `customers/` | 2 |
+| Who the customers are (personas) | `customers/` | 1 |
+| What we sell (the offer, the product, the course) | `departments/sales/`, `products/`, `departments/content/` | 2 |
 | Name, colours, fonts, voice | `brand/` | 3 |
 | Website, social posts, ads | `departments/marketing/` + `products/website/` | 4 |
-| What we sell (the offer, the course) | `departments/sales/`, `departments/content/` + `products/course/` | 5 |
-| Lead magnets | `departments/marketing/lead-magnets/` | 6 |
-| Leads, contacts, where they came from | `departments/crm/` | 7 |
-| Email templates and sequences | `departments/emails/` | 8 |
-| Keeping it safe | `.env` (gitignored), `/security-check` | 9 |
-| Pricing and checkout | `departments/sales/` | 10 |
+| Lead magnets | `departments/marketing/lead-magnets/` | 5 |
+| Leads, contacts, where they came from | `departments/crm/` | 6 |
+| Email templates and sequences | `departments/emails/` | 7 |
+| Keeping it safe | `.env` (gitignored), `/security-check` | 8 |
+| Pricing and checkout | `departments/sales/` | 9 |
 | Agents that run things (inbox, follow-ups) | `departments/automation/` | after the talk |
 | What the room voted | `votes/` | all |
 

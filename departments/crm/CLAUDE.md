@@ -1,7 +1,7 @@
 # CRM — the little black book
 
-**Filled in by:** Round 7 "The Little Black Book" (`/crm-connect`)
-**Status:** empty until Round 7
+**Filled in by:** Round 6 "The Little Black Book" (`/crm-connect`)
+**Status:** empty until Round 6
 
 One record per person, from first form fill to paying customer. Every form on every page writes here, with where they came from (`source`).
 
@@ -9,7 +9,7 @@ One record per person, from first form fill to paying customer. Every form on ev
 |---|---|
 | Forms on `products/website/` and `departments/marketing/lead-magnets/`, personas (for the `source` / segment fields) | Emails, sales |
 
-## Files (after Round 7)
+## Files (after Round 6)
 
 - `leads.csv` — one row per lead: who signed up, and from where. **Stays on this computer**: it's gitignored, because it holds real people's names and emails. Create it from `leads.example.csv` (the column headings). Never commit it, and never copy lead details into a tracked file
 - `leads.example.csv` — the column headings only, committed so everyone's leads file has the same shape
@@ -19,4 +19,4 @@ One record per person, from first form fill to paying customer. Every form on ev
 
 ## How forms connect
 
-Every lead form sends one JSON object: `name`, `email`, `source` (e.g. `lead-magnet:{slug}`), `utm_source`, `utm_medium`, `utm_campaign`, `created_at`. Until Round 7 each page keeps its leads in the browser. `/crm-connect` writes the lead endpoint URL here and sets `LEAD_ENDPOINT` in each page's script.
+Every lead form sends one JSON object: `name`, `email`, `source` (e.g. `lead-magnet:{slug}`), `utm_source`, `utm_medium`, `utm_campaign`, `created_at`. Until Round 6 each page keeps its leads in the browser. `/crm-connect` writes the lead endpoint URL here and sets `LEAD_ENDPOINT` in each page's script.

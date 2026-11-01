@@ -42,16 +42,15 @@ Here, every department is a folder. Every decision is a markdown file. Each roun
 
 | Round | Name | Skill | Writes |
 |---|---|---|---|
-| 1 | The pain point | `/pain-point` | `company/business.md` |
-| 2 | Who it's for | `/customer-profile` | `customers/personas/customer.md`, `referral-partner.md`, `student.md` |
-| 3 | Something to Sell | `/course-platform` | `departments/sales/offer.md` (+ `departments/content/`, `products/course/` if it's a course) |
-| 4 | Name That Brand | `/brand-kit` + `/brand-voice` | `brand/brand-guidelines.md`, `design-tokens.json`, `voice.md` |
-| 5 | Front Door | `/landing-page` | `departments/marketing/website.md`, `products/website/` |
-| 6 | The Bait | `/lead-magnet` | `departments/marketing/lead-magnets/` |
-| 7 | The Little Black Book | `/crm-connect` | `departments/crm/leads.csv` |
-| 8 | You've Got Mail | `/email-sequence` | `departments/emails/welcome-sequence/` |
-| 9 | Don't Get Robbed | `/security-check` | a report (nothing to commit) |
-| 10 | Show Me the Money | `/checkout` | the price in `departments/sales/offer.md`, buy button on the website |
+| 1 | The Problem | `/pain-point` + `/customer-profile` | `company/business.md`, `customers/personas/customer.md` (+ `referral-partner.md`, `student.md`) |
+| 2 | Something to Sell | `/course-platform` | `departments/sales/offer.md`, `products/product.md` (+ `departments/content/`, `products/course/` if it's a course) |
+| 3 | Name That Brand | `/brand-kit` + `/brand-voice` | `brand/brand-guidelines.md`, `design-tokens.json`, `voice.md` |
+| 4 | Front Door | `/landing-page` | `departments/marketing/website.md`, `products/website/` |
+| 5 | The Bait | `/lead-magnet` | `departments/marketing/lead-magnets/` |
+| 6 | The Little Black Book | `/crm-connect` | `departments/crm/leads.csv` |
+| 7 | You've Got Mail | `/email-sequence` | `departments/emails/welcome-sequence/` |
+| 8 | Don't Get Robbed | `/security-check` | a report (nothing to commit) |
+| 9 | Show Me the Money | `/checkout` | the price in `departments/sales/offer.md`, buy button on the website |
 
 Skills for the rounds land on the day via `git pull`.
 
@@ -61,16 +60,16 @@ Skills for the rounds land on the day via `git pull`.
 CLAUDE.md            ← the business's memory: AI reads this first
 TODO.md              ← what's next, for everyone
 company/             ← what the business is (Round 1)
-customers/           ← who we serve: personas/ (Round 2)
-brand/               ← how we look and sound (Round 4)
+customers/           ← who we serve: personas/ (Round 1)
+brand/               ← how we look and sound (Round 3)
 departments/
-  marketing/         ← website plan (Round 5), lead-magnets/ (Round 6)
-  sales/             ← the offer (Round 3) and price (Round 10)
-  content/           ← the course, if that's the product (Round 3)
-  crm/               ← every lead, and where they came from (Round 7)
-  emails/            ← what we send (Round 8)
+  marketing/         ← website plan (Round 4), lead-magnets/ (Round 5)
+  sales/             ← the offer (Round 2) and price (Round 9)
+  content/           ← the course, if that's the product (Round 2)
+  crm/               ← every lead, and where they came from (Round 6)
+  emails/            ← what we send (Round 7)
   automation/        ← agents that run it, after the talk
-products/            ← what we make and sell, and the pages people see: website/, course/
+products/            ← what we make and sell (Round 2), and the pages people see: website/, course/
 votes/               ← what the room voted, per round
 ```
 
