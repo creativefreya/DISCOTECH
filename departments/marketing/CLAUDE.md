@@ -5,7 +5,7 @@
 
 | Reads from | Feeds into |
 |---|---|
-| Case file, all personas, brand | CRM (every form sends leads there), emails |
+| Business file, all personas, brand | CRM (every form sends leads there), emails |
 
 ## Files
 

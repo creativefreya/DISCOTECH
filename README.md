@@ -42,8 +42,8 @@ Here, every department is a folder. Every decision is a markdown file. Each roun
 
 | Round | Name | Skill | Writes |
 |---|---|---|---|
-| 1 | The Case | `/case-file` | `company/case-file.md` |
-| 2 | The Client | `/client-profile` | `customers/personas/client.md`, `referral-partner.md`, `student.md` |
+| 1 | The pain point | `/pain-point` | `company/business.md` |
+| 2 | Who it's for | `/customer-profile` | `customers/personas/customer.md`, `referral-partner.md`, `student.md` |
 | 3 | Something to Sell | `/course-platform` | `departments/sales/offer.md` (+ `departments/content/`, `apps/course/` if it's a course) |
 | 4 | Name That Brand | `/brand-kit` + `/brand-voice` | `brand/brand-guidelines.md`, `design-tokens.json`, `voice.md` |
 | 5 | Front Door | `/landing-page` | `departments/marketing/website.md`, `apps/website/` |

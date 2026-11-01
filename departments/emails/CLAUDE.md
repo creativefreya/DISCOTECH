@@ -5,7 +5,7 @@
 
 | Reads from | Feeds into |
 |---|---|
-| Brand, `customers/personas/client.md`, `departments/marketing/lead-magnets/`, `votes/round-8.json` | Sent to every new lead in the CRM |
+| Brand, `customers/personas/customer.md`, `departments/marketing/lead-magnets/`, `votes/round-8.json` | Sent to every new lead in the CRM |
 
 ## Files
 

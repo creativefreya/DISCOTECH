@@ -5,7 +5,7 @@
 
 | Reads from | Feeds into |
 |---|---|
-| Case file, personas, curriculum, `votes/round-3.json` (product), `votes/round-10.json` (price) | Checkout button on the website and course |
+| Business file, personas, curriculum, `votes/round-3.json` (product), `votes/round-10.json` (price) | Checkout button on the website and course |
 
 ## Files
 

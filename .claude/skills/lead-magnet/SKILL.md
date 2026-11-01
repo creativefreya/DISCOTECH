@@ -22,7 +22,7 @@ Follow **Filling the gaps** in the root `CLAUDE.md`: look first, ask only for wh
 
 Read whichever exist:
 
-- `company/case-file.md` — what we sell, and what we want leads to do next
+- `company/business.md` — what we sell, and what we want leads to do next
 - `customers/personas/*.md` — who it's for, what keeps them up at 2am, the words they use
 - `brand/voice.md` — how to write. If it's missing, use the voice notes in `brand-guidelines.md`
 - `brand/brand-guidelines.md` + `brand/design-tokens.json` — name, colours, fonts
@@ -36,10 +36,10 @@ What you need, and where it usually comes from:
 
 | Need | Usually from | If missing, ask |
 |---|---|---|
-| Who it's for | the client persona | "Which customer is this for?" (offer the personas you found) |
+| Who it's for | the customer persona | "Which customer is this for?" (offer the personas you found) |
 | Topic and format | `votes/round-6.json` | Suggest 3 ideas based on the persona's 2am worry, each in a different format: checklist / template / question bank / quiz / short guide. Let them pick. |
-| The one promise | the case file + persona | "After using this, they'll be able to ___." Suggest 2 options. |
-| Next step after reading | the case file / offer | "Where should readers go next: book a call, visit the website, or buy something?" plus the link. If there's no link yet, use `../../../apps/website/index.html`, or `#` with a `[TODO: link]`. |
+| The one promise | the business file + persona | "After using this, they'll be able to ___." Suggest 2 options. |
+| Next step after reading | the business file / offer | "Where should readers go next: book a call, visit the website, or buy something?" plus the link. If there's no link yet, use `../../../apps/website/index.html`, or `#` with a `[TODO: link]`. |
 | Brand and voice | brand files | If neither exists: offer to run `/brand-voice` quickly, or carry on with the neutral template and say so. |
 
 If the room has voted (`votes/round-6.json` exists), or the person says "quick": don't ask. Pick from the files, then go to step 3.
@@ -76,7 +76,7 @@ If you asked questions in step 2, show the section list and get a quick yes befo
    - **Intro:** 2–3 short paragraphs. Their worry → why it matters → what this resource does about it.
    - **Sections:** 3–6, each scannable. Use the `.items` list for checklists and question banks. Use plain paragraphs or numbered steps for guides. Section 1 goes in **both** the teaser and the unlocked content.
    - **Gate:** the title says what they unlock. The button says what they get ("Send me the checklist"), not "Submit". Fine print: "No spam. Unsubscribe any time."
-   - **CTA:** one next step, matching the case file's offer.
+   - **CTA:** one next step, matching the business file's offer.
    - **Footer:** business name, plus the tagline from the brand guidelines if there is one.
 4. Set `SLUG` in the script. If `departments/crm/CLAUDE.md` gives a lead endpoint, set `LEAD_ENDPOINT` too. Otherwise leave it empty: leads stay in the browser until `/crm-connect`.
 5. Delete the template's HTML comments once filled. No `{{` should be left: check with `grep -n '{{' <file>`.
@@ -91,7 +91,7 @@ If you asked questions in step 2, show the section list and get a quick yes befo
 ## Rules
 
 - **Real value before the email form.** The teaser must be useful on its own, not just a tease.
-- **Never invent proof.** No made-up statistics, testimonials, client stories or "as seen in". Use the person's real ones, or leave them out.
+- **Never invent proof.** No made-up statistics, testimonials, customer stories or "as seen in". Use the person's real ones, or leave them out.
 - **Topics that touch the law, health or money** (surveillance, custody, debt, medication…): keep it general, avoid promising outcomes, and add one plain line in a `.note`: "General information, not legal advice. Rules differ by location. Check with a professional." Adjust the wording to the topic.
 - **The form never blocks the reader.** It unlocks even if saving fails.
 - **Every signup carries its source** (`lead-magnet:{slug}` plus any `utm_*` from the URL). That's how the CRM knows which page earned the lead.

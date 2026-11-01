@@ -13,7 +13,7 @@ Follow **Filling the gaps** in the root `CLAUDE.md`: look first, ask only for wh
 
 Read whichever of these exist:
 
-- `company/case-file.md` — what the business does, for whom
+- `company/business.md` — what the business does, for whom
 - `customers/personas/*.md` — who's reading, the words they use, what worries them
 - `brand/brand-guidelines.md` — name, vibe, any voice notes from Round 4
 - `brand/voice.md` — if it exists, you're **updating** it, not starting again
