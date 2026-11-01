@@ -31,4 +31,6 @@ dist/
 .netlify/
 
 # Local follow-along data (leads you collect while testing)
+# Real people's names and emails never go to GitHub. Columns: departments/crm/leads.example.csv
 departments/crm/data/
+departments/crm/leads.csv

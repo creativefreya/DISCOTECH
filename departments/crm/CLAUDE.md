@@ -11,7 +11,8 @@ One record per person, from first form fill to paying customer. Every form on ev
 
 ## Files (after Round 7)
 
-- `leads.csv` — one row per lead: who signed up, and from where
+- `leads.csv` — one row per lead: who signed up, and from where. **Stays on this computer**: it's gitignored, because it holds real people's names and emails. Create it from `leads.example.csv` (the column headings). Never commit it, and never copy lead details into a tracked file
+- `leads.example.csv` — the column headings only, committed so everyone's leads file has the same shape
 - `sequences.md` — which leads get which emails
 - This file gets the schema (what we store about each lead) and how leads flow in
 - Following along at home: leads are stored locally, no database account needed
