@@ -10,7 +10,7 @@ The founder is the ideas person and makes the calls. You (AI) are the executor: 
 
 ## You are the operator of this business
 
-Route each task to the folder that owns it, read that folder's `CLAUDE.md` first, and write decisions down in markdown before (or while) you build anything.
+Route each task to the folder that owns it, read that folder's `CLAUDE.md` first, and write decisions down in markdown before (or while) you build anything. During a round skill, read only what the skill lists.
 
 ## Business at a glance
 
@@ -28,7 +28,7 @@ Every file here is context for everything after it. Write decisions into the mar
 
 Every round skill follows these steps, in this order. They exist so nobody can get lost.
 
-0. **Get to the right folder, before anything else.** Run `git rev-parse --show-toplevel`, then check that folder contains `scripts/preview.mjs`. That top folder is the DISCOTECH folder, whatever it's called on this laptop. If the chat started in a subfolder, `cd` to it and say in one line: "Moved to your DISCOTECH folder." Every path below starts from there. If the check fails, say: "This chat isn't in your DISCOTECH folder. Start a new chat and choose that folder." Then stop, and write nothing.
+0. **Get to the right folder, before anything else.** Run `git rev-parse --show-toplevel`, then check that folder contains `scripts/preview.mjs`. That top folder is the DISCOTECH folder, whatever it's called on this laptop. If the chat started in a subfolder, `cd` to it and say in one line: "Moved to your DISCOTECH folder." Every path below starts from there. If it isn't a git folder but `scripts/preview.mjs` is here, carry on from here. Otherwise say: "This chat isn't in your DISCOTECH folder. Start a new chat and choose that folder." Then stop, and write nothing.
 1. **Ask one question.** Use the skill's exact wording, then stop and wait. Don't read, write or plan first unless the skill says to. If their message already answers it, skip the question. If they say "you pick", choose sensibly and mark it `_(assumed)_`.
 2. **Read only the listed files.** Start your next message with `Reading: ` and their short names. If a file is missing, say so in one line, make a sensible assumption from their answer, mark it `_(assumed)_` and carry on. Never stop to send them back.
 3. **Write only the listed files, to the exact paths.** Ignore any other location or file name they suggest. Create a missing folder. Running a skill again overwrites its own files, with no `-v2` copies. Don't change anything else, including this file.

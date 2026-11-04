@@ -20,7 +20,7 @@ If the person hasn't already said, ask exactly this and stop until they answer:
 
 Replace `Price: not set yet` in **`departments/sales/offer.md`** with a section headed exactly `## Price`: the price, one line on why it suits this customer, and a short comparison of what they'd otherwise pay or do. Comparison figures are rough and labelled `(rough estimate)`. Never invent reviews, results or real competitors' prices.
 
-If `products/product/index.html` exists, update its `data-price` element and add the comparison near it. If `products/product/` is still being built, change only `data-price`: the other chat picks up the rest.
+Then update the text inside every `data-price` element in `products/product/`, and add a one-line comparison below the price on `index.html`. If those pages don't exist yet, only change `offer.md`: `/product` reads the price before it finishes.
 
 Taking real money comes after the workshop. Don't create a checkout or a Stripe link.
 

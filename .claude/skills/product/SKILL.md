@@ -15,7 +15,7 @@ If the person hasn't already said, ask exactly this and stop until they answer:
 
 ## Read
 
-`company/business.md`, `customers/personas/customer.md`
+`company/business.md`, `customers/personas/customer.md`, `products/shared/base.css` (the page parts you can use)
 
 ## Write the plan first
 
@@ -33,23 +33,26 @@ If the person hasn't already said, ask exactly this and stop until they answer:
 - [ ] ...
 ```
 
-Choose screens from what this product needs. The first is always `products/product/index.html`, the page that explains and sells it. Others go beside it as `step-2.html` and `step-3.html`. For example: choosing a time slot for coaching, a lesson for a course, or the template itself.
+Choose screens from what this product needs. The first is always `products/product/index.html`, the page that explains and sells it. Others go beside it as `step-2.html` and `step-3.html`. For example: choosing a time slot for coaching, a lesson for a course, or the template itself. Write every checklist item unticked, one per screen.
 
 ## Tell them to move on
 
-Say exactly this, then keep working without waiting for a reply:
+Start the home page now (step 5 of How round skills work). Then say exactly this, and keep working without waiting for a reply:
 
 > Your offer and plan are saved. **I'll keep building your pages here.** When Freya starts the next round, open a new chat for it.
 
 ## Build
 
-Work through the checklist, one screen at a time, ticking each item in `products/product-plan.md` as you finish it. Start the home page first (see the root `CLAUDE.md`).
+Work through the checklist, one screen at a time, ticking each item in `products/product-plan.md` as you finish it.
 
 Page rules:
 - Plain HTML with `<link rel="stylesheet" href="../../brand/brand.css">` then `<link rel="stylesheet" href="../shared/base.css">`. Use the classes in `base.css`, with a small `<style>` block only for layout. Never set colours or fonts: `brand.css` owns those.
-- Put the price in `<span data-price>`, and fill it from `offer.md`.
+- Write the price as plain text inside `<span data-price>`, on every screen that shows it. Use `Price coming soon` until `offer.md` has one. Never load `offer.md` or any other markdown from the page.
 - Bookings, payments, logins and downloads are pretend. They show a message that says this part connects after the workshop. Never collect real payment details.
-- Write real, useful content, not placeholder text. Before finishing, read `offer.md` again in case a price has been set, and update `data-price`.
+- Write real, useful content, not placeholder text. Use the customer's own words.
+- Before finishing, read `offer.md` again in case a price has been set, and update every `data-price`.
+
+Only after the last screen, finish with the standard format.
 
 ## Finish
 

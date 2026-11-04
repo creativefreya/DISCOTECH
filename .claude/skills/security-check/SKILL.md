@@ -11,11 +11,13 @@ If the person hasn't already said, ask exactly this and stop until they answer:
 
 > **Have you added any API keys yet?** Yes, no, or "what's an API key?"
 
-If they ask what one is: a long password that lets code use a paid account, so anyone who has it can run up your bill.
+If they ask what one is, explain in one line: a long password that lets code use a paid account, so anyone who has it can run up your bill. Don't ask again. Carry on with the checks.
 
 ## Check this repo
 
 Run these from the repo root. Don't read `.env`, and never print a key: show only the file name and line number.
+
+If it isn't a git folder, the git commands below can't work, and an empty result doesn't mean it's safe. Report "This folder isn't connected to Git", search with `grep -rIlE` using the same pattern (skipping `.claude/skills/security-check`), and check `.gitignore` lists `.env` and `leads.csv`.
 
 1. **Keys in files Git would save:**
    ```bash

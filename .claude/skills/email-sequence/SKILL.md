@@ -30,9 +30,9 @@ Write 3 subject lines for the first email, in the brand voice. Ask exactly this,
 | 4 | Onboarding | Stage becomes `Customer` (send straight away) | Welcome, and what happens next |
 | 5 | Onboarding | 2 days later | Their first win: the step they just gave you |
 
-Use `{{first_name}}` in the greeting. Never invent testimonials, statistics or discounts.
+Use `{{first_name}}` in the greeting, the brand name as the sender, and `{{gift_link}}` or `{{product_link}}` where a link goes. Share useful tips without claiming facts or numbers you can't back up. Never invent testimonials, statistics or discounts.
 
-**`departments/emails/sequences/preview.html`:** link `../../../brand/brand.css` and `../../../products/shared/base.css`. Include a heading, this exact note, then each email in `<article class="email">` with `<div class="email__meta">` showing the subject, trigger and timing. Group them under "After they sign up" and "After they buy". Replace `{{first_name}}` with a sample name.
+**`departments/emails/sequences/preview.html`:** link `../../../brand/brand.css` and `../../../products/shared/base.css`. Include a heading, this exact note, then each email in `<article class="email">` with `<div class="email__meta">` showing the subject, trigger and timing. Group them under "After they sign up" and "After they buy". Replace `{{first_name}}` with `Sam`, and make links point to `../../../products/website/` and `../../../products/product/`.
 
 ```html
 <p class="note">These are previews on your laptop. Nothing has been sent. The homework connects Resend to send them.</p>

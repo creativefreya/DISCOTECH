@@ -15,7 +15,7 @@ If the person hasn't already said, ask exactly this and stop until they answer:
 
 ## Read
 
-`customers/personas/customer.md`, `departments/sales/offer.md`, `brand/brand.md`
+`customers/personas/customer.md`, `departments/sales/offer.md`, `brand/brand.md`, `products/shared/base.css` (the page parts you can use)
 
 ## Write
 

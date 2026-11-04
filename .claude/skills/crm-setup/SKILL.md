@@ -35,9 +35,9 @@ Suggest one optional question that would help sell to this customer. Ask exactly
 </form>
 ```
 
-Add the extra question as another `.field`, not required, named in lowercase with underscores. Just after the `#get` section add `<p class="note" data-saved-row hidden></p>`. In `lead-magnet.md`, update the `Source:` and `Form:` lines.
+Add the extra question as another `.field`, not required, named in lowercase with underscores. Just after the `#get` section add `<p class="note" data-saved-row hidden></p>`. In `lead-magnet.md`, change those lines to `Source: {source}` and `Form: {the field names}`.
 
-**`products/crm/dummy-data.js`:** `window.DUMMY_LEADS = [...]` with exactly 8 invented leads that fit this customer. Use the same fields as the form plus `source`, `stage`, `date`, with a mix of sources and stages. Emails must end in `@example.com`.
+**`products/crm/dummy-data.js`:** `window.DUMMY_LEADS = [...]` with exactly 8 invented leads that fit this customer. Use the same fields as the form plus `source`, `stage`, `date`, with a mix of sources and stages. Emails must end in `@example.com`. Use names that are different from the customer's name in `customer.md`.
 
 **`products/crm/index.html`:** link `../../brand/brand.css` and `../shared/base.css`. Include a heading, this exact note, a table and these scripts:
 
