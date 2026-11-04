@@ -108,12 +108,12 @@ Marketing emails have legal rules, like the unsubscribe link and honest sender d
 Stripe (https://stripe.com) makes your Buy button real. Stay in **test mode** for this whole step: nobody gets charged, and you can try it as many times as you like.
 
 1. Make an account and switch on test mode.
-2. In the Stripe dashboard, add your **product** at the price in `departments/sales/offer.md`. If you charge monthly, choose a recurring price.
+2. In the Stripe dashboard, add your **product** at the price in `departments/sales/offer.md`. If people pay monthly or yearly, like for an app, choose a recurring price.
 3. Make a **Payment Link** for it.
 4. Ask Claude:
 
 ```
-Here's my Stripe test payment link: [paste the link]. Connect it to the Buy button on my product page and add a thank-you page. Add a Stripe webhook using a Netlify Function: when someone pays, set their stage to Customer in my leads table, adding them if they're new. Verify the webhook signature, and test it on my laptop with the Stripe command-line tool (ask me before installing it). Tell me which line of .env to paste the signing secret into. If I charge monthly, also handle cancellations and tell me how customers can cancel. Don't deploy anything yet.
+Here's my Stripe test payment link: [paste the link]. Connect it to the Buy button on my product page and add a thank-you page. Add a Stripe webhook using a Netlify Function: when someone pays, set their stage to Customer in my leads table, adding them if they're new. Verify the webhook signature, and test it on my laptop with the Stripe command-line tool (ask me before installing it). Tell me which line of .env to paste the signing secret into. If I charge monthly or yearly, also handle cancellations and tell me how customers can cancel. Don't deploy anything yet.
 ```
 
 A payment link is safe to put on a page: it isn't a key. Test it with the card `4242 4242 4242 4242`, any future date and any 3 numbers.
@@ -127,7 +127,7 @@ Want discount codes? Make them in the Stripe dashboard (Product catalog → Coup
 They've paid. Now what do they get? This depends on what you sell, and your plan is in `products/product-plan.md`.
 
 ```
-Read products/product-plan.md and departments/sales/offer.md, and tell me the simplest way to get this to someone after they pay. A course needs a login. A template needs a download. A service needs a real booking calendar. A monthly plan needs access that stops if they cancel. Suggest one way, and wait for my yes before you build it. Replace the pretend parts of my product pages as you go.
+Read products/product-plan.md and departments/sales/offer.md, and tell me the simplest way to get this to someone after they pay. A course needs a login. A template needs a download. A service needs a real booking calendar. An app needs a login, with access that stops if they cancel. Suggest one way, and wait for my yes before you build it. Replace the pretend parts of my product pages as you go.
 ```
 
 **It worked when** you make a test purchase as a customer would and end up with the thing you're selling. A link in the thank-you page or a confirmation email is a fine place to start. Just remember anyone with that link can use it.

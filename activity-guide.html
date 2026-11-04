@@ -745,10 +745,10 @@
       },
       {
         name: 'The product',
-        what: "Four ways to sell a fix: do it for them, teach it, make a template, or charge monthly. Claude makes a plan, then keeps building while you move on.",
+        what: "Four ways to sell a fix: do it for them, teach it, make a template, or build an app. Claude makes a plan, then keeps building while you move on.",
         prompt: '/product',
         asks: 'What do we sell them, and what should they walk away with?',
-        options: ['We do it for them', 'We teach it', 'A template', 'A monthly plan'],
+        options: ['We do it for them', 'We teach it', 'A template', 'An app'],
         writes: ['departments/sales/offer.md', 'products/product-plan.md', 'products/product/'],
         done: 'Claude says your offer and plan are saved. It keeps building in this chat, so start the next round in a new one.'
       },
@@ -757,7 +757,7 @@
         what: "The price tells people who it's for. People judge a price by what sits next to it.",
         prompt: '/pricing',
         asks: 'What do we charge?',
-        options: ['$29', '$299', '$1,500'],
+        options: ['$29', '$299', '$1,500', '$10,000'],
         writes: ['departments/sales/offer.md'],
         done: 'your offer shows the price and what it compares to.',
         tip: "<b>No real payments today.</b> Connecting Stripe comes after the workshop."
@@ -801,7 +801,7 @@
         tip: "<b>Today these are previews.</b> Nothing gets sent. Sending them comes after the workshop."
       },
       {
-        name: "Don't get robbed",
+        name: "Don't get hacked",
         what: "An API key is a password that costs money. Claude checks this folder for leaks, and your laptop for updates that close known security holes.",
         prompt: '/security-check',
         asks: 'Have you added any API keys yet?',

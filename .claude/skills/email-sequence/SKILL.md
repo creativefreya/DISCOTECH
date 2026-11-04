@@ -15,7 +15,7 @@ argument-hint: "[subject line]"
 Write 3 subject lines for the first email, in the brand voice. Ask exactly this, with yours filled in, and stop until they answer:
 
 > **Two quick choices:**
-> 1. Which subject line for your first email? Type what the room picked, or choose: {three options}. Or write your own.
+> 1. Which subject line for your first email? Choose: {three options}. Or write your own.
 > 2. What's the first thing a new customer should do after buying?
 
 ## Write

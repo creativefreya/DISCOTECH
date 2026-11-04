@@ -10,7 +10,7 @@ argument-hint: "[price]"
 
 If the person hasn't already said, ask exactly this and stop until they answer:
 
-> **What do we charge?** $29, $299, $1,500, or your own price. Type what the room picked, or your own.
+> **What do we charge?** $29, $299, $1,500, $10,000, or your own price. Type what the room picked, or your own.
 
 ## Read
 
