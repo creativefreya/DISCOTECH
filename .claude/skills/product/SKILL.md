@@ -4,7 +4,7 @@ description: Round 2. Asks what the business sells, writes the offer and a step-
 argument-hint: "[what we sell]"
 ---
 
-Follow **How round skills work** in the root `CLAUDE.md`. This works for anything: a service, coaching, a course, a template, a membership, a physical product. Never ask what kind it is. Work it out.
+**First, run step 0 of How round skills work in the root `CLAUDE.md`: get to the DISCOTECH folder.** Then follow the rest of those steps. This works for anything: a service, coaching, a course, a template, a membership, a physical product. Never ask what kind it is. Work it out.
 
 ## Ask
 

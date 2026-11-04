@@ -3,7 +3,7 @@ name: crm-setup
 description: Round 6. Plans the sign-up form and backend, adds the working form to the Lead Magnet page, and builds a local CRM mockup with dummy data. No database today. Use when the user invokes /crm-setup or wants to plan the CRM or sign-up form.
 ---
 
-Follow **How round skills work** in the root `CLAUDE.md`.
+**First, run step 0 of How round skills work in the root `CLAUDE.md`: get to the DISCOTECH folder.** Then follow the rest of those steps.
 
 ## Read first, because the question uses it
 

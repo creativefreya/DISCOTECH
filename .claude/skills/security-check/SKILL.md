@@ -3,7 +3,7 @@ name: security-check
 description: Round 8, and before any push. Checks this repo for leaked keys and risky files, and checks this laptop for missing security updates and known attacks. Only reports: it never changes or installs anything. Use when the user invokes /security-check or asks whether something is safe to push or share.
 ---
 
-This follows **How round skills work** in the root `CLAUDE.md`, except it writes no files and doesn't need the home page.
+**First, run step 0 of How round skills work in the root `CLAUDE.md`: get to the DISCOTECH folder.** Then follow the rest of those steps, except this skill writes no files and doesn't need the home page.
 
 ## Ask
 

@@ -4,6 +4,7 @@
     "allow": [
       "Bash(node scripts/preview.mjs --ensure*)",
       "Bash(node scripts/machine-check.mjs*)",
+      "Bash(git rev-parse --show-toplevel)",
       "Bash(git ls-files*)",
       "Bash(git check-ignore*)",
       "Bash(git log*)"

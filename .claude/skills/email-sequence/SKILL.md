@@ -4,7 +4,7 @@ description: Round 7. Asks for a subject line and a new customer's first step, t
 argument-hint: "[subject line]"
 ---
 
-Follow **How round skills work** in the root `CLAUDE.md`.
+**First, run step 0 of How round skills work in the root `CLAUDE.md`: get to the DISCOTECH folder.** Then follow the rest of those steps.
 
 ## Read first, because the question uses it
 

@@ -4,7 +4,7 @@ description: Round 3. Asks what to charge, then adds the price and a value compa
 argument-hint: "[price]"
 ---
 
-Follow **How round skills work** in the root `CLAUDE.md`.
+**First, run step 0 of How round skills work in the root `CLAUDE.md`: get to the DISCOTECH folder.** Then follow the rest of those steps.
 
 ## Ask
 

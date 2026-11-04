@@ -4,7 +4,7 @@ description: Round 4. Asks for a name, a style and an optional inspiration scree
 argument-hint: "[name], [style]"
 ---
 
-Follow **How round skills work** in the root `CLAUDE.md`.
+**First, run step 0 of How round skills work in the root `CLAUDE.md`: get to the DISCOTECH folder.** Then follow the rest of those steps.
 
 ## Ask
 

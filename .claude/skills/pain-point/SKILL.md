@@ -4,7 +4,7 @@ description: Round 1. Asks who the business helps and with what, then writes the
 argument-hint: "[who we help, and with what]"
 ---
 
-Follow **How round skills work** in the root `CLAUDE.md`.
+**First, run step 0 of How round skills work in the root `CLAUDE.md`: get to the DISCOTECH folder.** Then follow the rest of those steps.
 
 ## Ask
 

@@ -4,7 +4,7 @@ description: Round 5. Asks what free gift to offer, then builds one page with on
 argument-hint: "[the free gift]"
 ---
 
-Follow **How round skills work** in the root `CLAUDE.md`.
+**First, run step 0 of How round skills work in the root `CLAUDE.md`: get to the DISCOTECH folder.** Then follow the rest of those steps.
 
 ## Ask
 
