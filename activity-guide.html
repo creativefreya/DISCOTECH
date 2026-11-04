@@ -452,6 +452,7 @@
     .act__text { font-size: clamp(21px, 4.4vw, 28px); line-height: 44px; font-weight: 700; }
     .act__skill { color: var(--accent-cyan); font-family: 'JetBrains Mono', var(--mono-font); font-weight: 700; }
     .act__asks { margin-top: 4px; color: var(--text-muted); }
+    #get-latest .chatbox__text { min-height: 0; overflow-wrap: anywhere; font-family: 'JetBrains Mono', var(--mono-font); }
     .act__output { margin-top: 26px; padding-left: 60px; }
     .act__output-label { font-family: var(--pixel-font); font-size: 12px; color: var(--accent-cyan); margin-bottom: 10px; }
     .act__file { font-family: 'JetBrains Mono', var(--mono-font); font-size: 15px; overflow-wrap: anywhere; margin-top: 4px; }
@@ -600,6 +601,24 @@
         <a href="#after"><b>AFTER THE WORKSHOP</b>Connect the plumbing, so it works on the real internet.</a>
       </div>
     </header>
+
+    <!-- ═══ GET THE LATEST ═══ -->
+    <section class="section" id="get-latest">
+      <span class="label label--cyan">START HERE</span>
+      <h2 class="section-title">Get the latest</h2>
+      <div class="card">
+        <div class="act__steps" style="margin-top:0">
+          <div>
+            <p class="step__title">New here? Run this in a terminal.</p>
+            <div data-prompt="git clone https://github.com/creativefreya/DISCOTECH.git" data-terminal></div>
+          </div>
+          <div>
+            <p class="step__title">Already cloned? Run this inside your DISCOTECH folder.</p>
+            <div data-prompt="git pull" data-terminal></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ═══════════ PART 1: DURING THE WORKSHOP ═══════════ -->
     <div class="part" id="during">
@@ -912,11 +931,11 @@
     function copyText(text, btn) {
       function show() {
         btn.classList.add('copy--done');
-        btn.textContent = '✓ Copied! Now paste it into Claude';
+        btn.textContent = btn.dataset.copied || '✓ Copied! Now paste it into Claude';
         clearTimeout(btn._t);
         btn._t = setTimeout(function() {
           btn.classList.remove('copy--done');
-          btn.textContent = COPY_ICON_TEXT;
+          btn.textContent = btn.dataset.label || COPY_ICON_TEXT;
         }, 2500);
       }
       function fallback() {
@@ -949,7 +968,14 @@
     document.querySelectorAll('[data-prompt]').forEach(function(el) {
       var text = el.getAttribute('data-prompt');
       el.innerHTML = chatbox(promptHtml(text));
-      el.querySelector('.copy').addEventListener('click', function() { copyText(text, this); });
+      var copyBtn = el.querySelector('.copy');
+      if (el.hasAttribute('data-terminal')) {
+        el.querySelector('.chatbox__head').innerHTML = '<span>Paste into your terminal</span>';
+        copyBtn.dataset.label = 'Copy command';
+        copyBtn.dataset.copied = '✓ Copied! Now paste it into your terminal';
+        copyBtn.textContent = copyBtn.dataset.label;
+      }
+      copyBtn.addEventListener('click', function() { copyText(text, this); });
     });
 
     // ── Rounds and after-workshop steps: one card shape ──
