@@ -75,7 +75,11 @@ votes/               ← what the room voted, per round
 
 ## After the show: homework
 
-Everything you build in the gameshow runs on your laptop. [HOMEWORK.md](HOMEWORK.md) connects it to the real world: hosting (Netlify or Cloudflare), a database (Neon), emails (Resend) and payments (Stripe).
+Everything you build in the gameshow runs on your laptop. [HOMEWORK.md](HOMEWORK.md) reviews what you've built, makes a private copy of this repo for your personal use, then connects it to the real world: hosting (Netlify), your own domain, a database (Neon), emails (Resend) and payments (Stripe). Open this folder in Claude Code and paste:
+
+```
+Read HOMEWORK.md and walk me through it, one step at a time.
+```
 
 ## Want to take it further?
 
