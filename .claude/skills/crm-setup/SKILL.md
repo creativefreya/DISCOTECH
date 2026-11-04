@@ -21,7 +21,7 @@ Suggest one optional question that would help sell to this customer. Ask exactly
 
 **`departments/crm/crm.md`** (under 40 lines): `# The CRM`, then:
 - **Form fields:** `first_name`, `email`, and the extra question if kept.
-- **Added automatically:** `source` (their answer, lowercase, e.g. `linkedin`), `stage`, `date`.
+- **Added automatically:** `source` (their main answer as one lowercase word, e.g. `linkedin`), `stage`, `date`.
 - **Stages:** `Lead` when they sign up, `Signed up` when they take the next step, `Customer` when they pay.
 - **Backend plan: not built today.** Plain steps for after the workshop: a Neon database table with these columns, a small server function that receives the form, the connection string kept in `.env`, then replacing the browser saving in `products/shared/lead-form.js`.
 

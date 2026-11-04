@@ -32,7 +32,7 @@ Every round skill follows these steps, in this order. They exist so nobody can g
 1. **Ask one question.** Use the skill's exact wording, then stop and wait. Don't read, write or plan first unless the skill says to. If their message already answers it, skip the question. If they say "you pick", choose sensibly and mark it `_(assumed)_`.
 2. **Read only the listed files.** Start your next message with `Reading: ` and their short names. If a file is missing, say so in one line, make a sensible assumption from their answer, mark it `_(assumed)_` and carry on. Never stop to send them back.
 3. **Write only the listed files, to the exact paths.** Ignore any other location or file name they suggest. Create a missing folder. Running a skill again overwrites its own files, with no `-v2` copies. Don't change anything else, including this file.
-4. **Keep it simple and local.** No web browsing, installs, build tools, git commands, accounts or API keys during a round.
+4. **Keep it simple and local.** No web browsing, installs, build tools, accounts or API keys during a round. The only git commands are the read-only ones in step 0 and `/security-check`.
 5. **Update the home page.** Run `node scripts/preview.mjs --ensure`. It prints the address and opens the browser the first time. Pages then refresh themselves, so never tell people to refresh or open files. If it prints `PREVIEW_FAILED`, give them the file path to open instead.
 6. **Check your work.** Confirm every listed file exists. Write any that's missing.
 7. **Finish in exactly this format,** then stop:
@@ -41,7 +41,7 @@ Every round skill follows these steps, in this order. They exist so nobody can g
 **You told me:** {their answer, in a few words}
 **I read:** {short file names, or "nothing yet"}
 **I made:** {each path, with a few plain words on what it is}
-**See it:** {the home page address}
+**See it:** {the home page address, plus anything the skill's Finish section says to point out}
 
 {the skill's "Your question"}
 

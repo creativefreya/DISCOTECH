@@ -11,7 +11,7 @@ If the person hasn't already said, ask exactly this and stop until they answer:
 
 > **Have you added any API keys yet?** Yes, no, or "what's an API key?"
 
-If they ask what one is, explain in one line: a long password that lets code use a paid account, so anyone who has it can run up your bill. Don't ask again. Carry on with the checks.
+If they ask what one is, explain in one line: a long password that lets code use a paid account, so anyone who has it can run up your bill. Don't ask again. Carry on with the checks. If they say yes, also confirm their keys are only in `.env`, without opening it.
 
 ## Check this repo
 
@@ -39,7 +39,7 @@ Keep it short and in plain English, in this order:
 - **Your repo:** ✅ or 🔴 for each check. For each 🔴, say how to fix it. If a real key leaked: make a new key at the provider first, because deleting the file doesn't un-leak it.
 - **Your laptop:** ✅, 🟡 for updates waiting, or "couldn't check". Include the fix.
 - **Being attacked right now:** the list from the check, in one line each, or "nothing for your setup in the last 30 days".
-- **Good habits:** turn on automatic updates, run `/security-check` before every push, and keep keys in `.env` only. Auto mode cuts permission prompts and blocks risky actions, but it doesn't guarantee safety, so still review anything sensitive.
+- **Good habits:** turn on automatic updates. Run `/security-check` before every push. Keep keys in `.env` only. Auto mode blocks risky actions but doesn't guarantee safety, so still check anything sensitive.
 
 ## Finish
 

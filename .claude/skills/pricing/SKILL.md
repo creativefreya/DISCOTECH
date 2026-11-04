@@ -22,7 +22,7 @@ Replace `Price: not set yet` in **`departments/sales/offer.md`** with a section 
 
 Then update the text inside every `data-price` element in `products/product/`, and add a one-line comparison below the price on `index.html`. If those pages don't exist yet, only change `offer.md`: `/product` reads the price before it finishes.
 
-Taking real money comes after the workshop. Don't create a checkout or a Stripe link.
+Taking real money comes after the workshop. Don't add a Stripe link or real payment step.
 
 ## Finish
 
