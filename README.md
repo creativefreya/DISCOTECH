@@ -1,12 +1,12 @@
 # An Unlikely Gameshow — build a business in under 90 minutes with AI
 
-Starter repo for Freya Stockman's talk at **Techella**. The room picks a business, votes on every big decision, and Claude Code builds it live: pain point → customers → brand → website → product → lead magnet → CRM → emails → security → checkout.
+Starter repo for Freya Stockman's talk at **DISCOTECH**. The room picks a business, votes on every big decision, and Claude Code builds it live: pain point → customers → brand → website → product → lead magnet → CRM → emails → security → checkout.
 
-> 🎁 **A gift from Freya, workshop or not.** You don't need a Techella ticket to use this. Clone it, build your own business in it, and make it yours.
+> 🎁 **A gift from Freya, workshop or not.** You don't need a DISCOTECH ticket to use this. Clone it, build your own business in it, and make it yours.
 
 Coming to the talk? You can just watch and vote on your phone, or build along. Not coming? This repo is everything you need to do it at home: open it in Claude Code and ask *"read CLAUDE.md and help me start Round 1 for my own business idea"*. Each round's skill gets added after the event, so `git pull` later to play the whole gameshow yourself.
 
-Step-by-step setup page: [augmenteddesigner.com/resources/techella-gameshow](https://augmenteddesigner.com/resources/techella-gameshow/)
+Step-by-step setup page: [augmenteddesigner.com/resources/discotech-gameshow](https://augmenteddesigner.com/resources/discotech-gameshow/)
 
 ## Before the event
 

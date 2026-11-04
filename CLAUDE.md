@@ -2,7 +2,7 @@
 
 This folder is a whole business. Marketing, customers, brand, emails, the course and sales all live here as files, so AI can see all of it and work on any of it.
 
-Built live at **Techella** in *An Unlikely Gameshow* with Freya Stockman. The room are the co-founders: they vote, Claude builds.
+Built live at **DISCOTECH** in *An Unlikely Gameshow* with Freya Stockman. The room are the co-founders: they vote, Claude builds.
 
 ## Why it works this way
 
@@ -65,6 +65,10 @@ The skills here aren't written for one business. They work out the details from 
 | `/lead-magnet` | Turns a topic into a free resource page that asks for an email to unlock the rest. Writes the plan and the page into `departments/marketing/lead-magnets/`. |
 
 More skills arrive on the day: run `git pull` at the start of the talk.
+
+## The activity guide
+
+`activity-guide.html` in the root of this folder has the copy-paste prompt for every round. When the person asks to open the activity guide, open that file in their default browser: `open activity-guide.html` on Mac, `start activity-guide.html` on Windows. Then tell them to keep it next to Claude. Don't run its prompts or change the file unless they ask.
 
 ## Safety
 

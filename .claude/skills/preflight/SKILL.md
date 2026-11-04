@@ -1,6 +1,6 @@
 ---
 name: preflight
-description: Check this laptop is ready for the Techella gameshow (Git, Node.js, this repo, GitHub connection) and help fix anything that isn't. Use when the user says "preflight", "am I ready", "check my setup", "is my laptop ready for the workshop", or invokes /preflight.
+description: Check this laptop is ready for the DISCOTECH gameshow (Git, Node.js, this repo, GitHub connection) and help fix anything that isn't. Use when the user says "preflight", "am I ready", "check my setup", "is my laptop ready for the workshop", or invokes /preflight.
 ---
 
 # Preflight — are you ready for the Gameshow?
@@ -17,7 +17,7 @@ From the repo root:
 bash scripts/preflight.sh
 ```
 
-If that fails because you're not in the repo, find the `techella-unlikely-gameshow` folder (usually in Documents) and run it from there.
+If that fails because you're not in the repo, find the `DISCOTECH` folder, or `techella-unlikely-gameshow` if it was cloned before the rename (usually in Documents) and run it from there.
 
 Also check whether this is a Mac or Windows (`uname -s`: `Darwin` = Mac). On a Mac, check whether Homebrew is installed (`command -v brew`). You'll need both for the fix commands.
 
@@ -61,7 +61,7 @@ For each fix, in order:
 | Git doesn't know their name/email | `git config --global user.name "Their Name"` then `git config --global user.email "their@email.com"` | same | Two separate commands. Use their real answers. |
 | Node.js missing or too old | Homebrew installed: `brew install node`. No Homebrew: run `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh \| bash`, then close and reopen Claude Code, then run `nvm install --lts` | `winget install --id OpenJS.NodeJS.LTS -e` | The no-Homebrew Mac route needs no password. Fallback for anyone: the LTS installer from https://nodejs.org (big green button). Close and reopen Claude Code after installing. |
 | npx not found | comes with Node.js: fix Node first | same | |
-| Not inside the gameshow repo | no command | | Explain how to open the `techella-unlikely-gameshow` folder in Claude Code (PREP.md step 3). |
+| Not inside the gameshow repo | no command | | Explain how to open the `DISCOTECH` folder in Claude Code (PREP.md step 3). |
 | Some folders missing | `git checkout -- <the missing folders from the check>` | same | Restores only those folders. |
 | Copy is behind GitHub | `git pull` | same | |
 | Couldn't reach GitHub | no command | | Check the wifi, then run `/preflight` again. |
@@ -71,7 +71,7 @@ For each fix, in order:
 
 ## 5. Finish with one line
 
-- All PASS → "You're ready for the Gameshow. See you at Techella!"
+- All PASS → "You're ready for the Gameshow. See you at DISCOTECH!"
 - Only WARN → "You're ready. The ⚠️ items are nice-to-haves."
 - Any FAIL → what's left, then "If you can't fix it before the day, come anyway: you can vote on your phone and follow on screen."
 

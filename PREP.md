@@ -25,14 +25,14 @@ Already paying for another AI coding tool, like Cursor or Copilot? Use that inst
 
 In the Claude desktop app's Code tab, start a new session and ask:
 
-> Clone https://github.com/creativefreya/techella-unlikely-gameshow into my Documents folder and open it
+> Clone https://github.com/creativefreya/DISCOTECH into my Documents folder and open it
 
 No Git yet? Claude will notice and offer to install it. On a Mac, a pop-up appears: click **Install**.
 
 Or in a terminal:
 
 ```bash
-git clone https://github.com/creativefreya/techella-unlikely-gameshow.git
+git clone https://github.com/creativefreya/DISCOTECH.git
 ```
 
 ## 4. Run the check
@@ -49,4 +49,4 @@ Claude checks your laptop (Git, Node.js, the repo) and tells you in plain Englis
 
 Open the repo in Claude Code and type `git pull` (or ask Claude to "pull the latest"). That gets the round skills.
 
-Step-by-step page with copy buttons: [augmenteddesigner.com/resources/techella-gameshow](https://augmenteddesigner.com/resources/techella-gameshow/)
+Step-by-step page with copy buttons: [augmenteddesigner.com/resources/discotech-gameshow](https://augmenteddesigner.com/resources/discotech-gameshow/)

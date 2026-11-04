@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Preflight: checks a laptop is ready for the Techella gameshow.
+# Preflight: checks a laptop is ready for the DISCOTECH gameshow.
 # Works on Mac, Linux and Windows (Git Bash, which Claude Code uses on Windows).
 # Prints one line per check: PASS / WARN / FAIL, with a fix hint. Exits 1 if anything FAILs.
 
@@ -10,7 +10,7 @@ pass() { echo "PASS  $1"; }
 warn() { echo "WARN  $1"; echo "      fix: $2"; warns=$((warns + 1)); }
 fail() { echo "FAIL  $1"; echo "      fix: $2"; fails=$((fails + 1)); }
 
-echo "Techella gameshow preflight"
+echo "DISCOTECH gameshow preflight"
 echo "---------------------------"
 
 # 1. Git installed
@@ -54,7 +54,7 @@ if [ -n "$repo_root" ] && [ -f "$repo_root/CLAUDE.md" ] && [ -f "$repo_root/scri
   pass "You're inside the gameshow repo"
   cd "$repo_root" || exit 1
 else
-  fail "Not inside the gameshow repo" "Open the techella-unlikely-gameshow folder in Claude Code (see PREP.md step 3)"
+  fail "Not inside the gameshow repo" "Open the DISCOTECH folder in Claude Code (see PREP.md step 3)"
 fi
 
 # 6. Folder structure intact
