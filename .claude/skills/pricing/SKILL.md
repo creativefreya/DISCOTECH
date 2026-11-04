@@ -26,5 +26,7 @@ Taking real money comes after the workshop. Don't add a Stripe link or real paym
 
 ## Finish
 
+Under `**What I captured:**`, write out the new `## Price` section. You don't need the rest of `offer.md`.
+
 **Your question:** "Does this feel like good value next to the alternatives? Want to try a different price, or say 'looks good'."
 **Next round:** `/brand-kit`

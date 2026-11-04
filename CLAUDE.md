@@ -41,6 +41,7 @@ Every round skill follows these steps, in this order. They exist so nobody can g
 **You told me:** {their answer, in a few words}
 **I read:** {short file names, or "nothing yet"}
 **I made:** {each path, with a few plain words on what it is}
+**What I captured:** {the contents of every markdown file you wrote this round, in full, so the person can read it right here without opening anything}
 **See it:** [localhost:3000](http://localhost:3000) {using the real address, plus anything the skill's Finish section says to point out}
 
 {the skill's "Your question"}
@@ -48,7 +49,7 @@ Every round skill follows these steps, in this order. They exist so nobody can g
 **Next:** when the next round starts, open a new chat in this folder and run {the skill's "Next round"}.
 ```
 
-If this round only wrote markdown files, replace the `**See it:**` line with `**Here it is:**` and write out what you made, right there in the chat.
+Always include `**What I captured:**`. Markdown files are read in the chat, never on localhost. Leave out the `**See it:**` line if this round has no page to see.
 
 If they answer your question, make the change in the same files, then repeat the format.
 

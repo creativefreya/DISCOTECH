@@ -37,7 +37,7 @@ Choose screens from what this product needs. The first is always `products/produ
 
 ## Tell them to move on
 
-Start the home page now (step 5 of How round skills work). Then say exactly this, and keep working without waiting for a reply:
+Start the home page now (step 5 of How round skills work). Write out `offer.md` and `product-plan.md` in full in the chat, so the person can read what you captured. Then say exactly this, and keep working without waiting for a reply:
 
 > Your offer and plan are saved. **I'll keep building your pages here.** When Freya starts the next round, open a new chat for it.
 

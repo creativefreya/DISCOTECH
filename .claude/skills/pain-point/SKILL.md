@@ -27,7 +27,7 @@ Make the customer specific and human. Mark guesses `_(assumed)_`.
 
 ## Finish
 
-This round makes no pages. Skip step 5, don't start the home page and don't mention localhost. Replace the `**See it:**` line with `**Here it is:**`, then write out the customer file in full and a short summary of the business, right there in the chat.
+This round makes no pages. Skip step 5, don't start the home page and don't mention localhost. Leave out the `**See it:**` line. Under `**What I captured:**`, write out `customer.md` and `business.md` in full.
 
 **Your question:** "Does this customer sound like a real person? Tell me what's off and I'll fix it, or say 'looks good'."
 **Next round:** `/product`
