@@ -596,7 +596,9 @@
     <section class="section" id="multitask">
       <span class="label label--purple">HOW WE WORK TODAY</span>
       <h2 class="section-title">Multitasking with Claude</h2>
-      <p class="section-desc">Each job gets its own chat, side by side. While one builds, start the next.</p>
+      <p class="section-desc">Each round gets its own chat. When Claude says it's done, or Round 2 tells you to move on, start the next round in a new chat.</p>
+      <div class="tip" style="margin-bottom:18px"><b>Do this once: choose Auto.</b> Under the chat box, open the mode menu and pick <b>Auto</b>, so Claude isn't stopping to ask about every file. Don't see it? Pick <b>Accept edits</b>.</div>
+      <div class="tip" style="margin-bottom:18px"><b>Your home page:</b> after Round 1, everything you make appears at <b>localhost:3000</b> and updates itself. Keep that tab open.</div>
       <div class="ms" id="ms" aria-label="Four Claude chats running side by side in split view" role="img">
         <div class="ms__bar">
           <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
@@ -621,7 +623,7 @@
     <section class="section" id="paste">
       <span class="label label--pink">EVERY ROUND</span>
       <h2 class="section-title">Copy here. Paste in Claude.</h2>
-      <p class="section-desc">Same three moves, nine times.</p>
+      <p class="section-desc">Same three moves, eight times: paste the skill, answer its question, see the result.</p>
       <div class="card">
         <div class="paste">
           <div>
@@ -648,7 +650,7 @@
     <section class="section" id="rounds-wrap">
       <span class="label label--green">THE ROUNDS</span>
       <h2 class="section-title">Build the business</h2>
-      <p class="section-desc">Type in what the room picked, or your own idea. Leave a box empty and Claude will ask you.</p>
+      <p class="section-desc">Paste the skill and Claude asks you one question. Answer with what the room picked, or your own idea. Tap an answer below to copy it.</p>
       <div id="rounds"></div>
       <button class="clear" id="clear" type="button">Clear my answers</button>
     </section>
@@ -659,7 +661,7 @@
       <h2 class="section-title">The folder remembers</h2>
       <div class="card why-card">
         <p>Every round writes its decisions into a file in your folder. The next round reads those files before it does anything.</p>
-        <p><strong>That's why the prompts stay short.</strong> By Round 8, the emails already know your customer, your brand and your freebie, and you never explained them twice.</p>
+        <p><strong>That's why the prompts stay short.</strong> By Round 7, the emails already know your customer, your brand and your freebie, and you never explained them twice.</p>
       </div>
     </section>
 
@@ -734,89 +736,79 @@
       {
         name: 'The problem',
         what: "Who are we helping, and with what? Every other round reads this answer.",
-        picks: [{
-          key: 'problem', label: 'The room picked', hint: 'Or your own: who has what problem?',
-          options: ['A best man dreading the wedding speech', 'A plant parent whose plants keep dying', 'An office worker whose dog is bored', 'A person with ADHD who keeps forgetting birthdays']
-        }],
-        prompt: "/pain-point We're starting a new business. We help: {problem}",
+        prompt: '/pain-point',
+        asks: 'Who are we helping, and with what?',
+        options: ['A best man dreading the wedding speech', 'A plant parent whose plants keep dying', 'An office worker whose dog is bored', 'A person with ADHD who keeps forgetting birthdays'],
         writes: ['company/business.md', 'customers/personas/customer.md'],
-        done: 'both files are in your folder, and the customer file sounds like a real person.'
+        done: 'your home page opens at localhost, and your customer sounds like a real person.'
       },
       {
         name: 'The product',
-        what: "Four ways to sell a fix: do it for them, teach it, make a template, or charge monthly. Pick what suits your customer.",
-        picks: [{
-          key: 'product', label: 'The room picked', hint: 'Or your own: what do we sell them?',
-          options: ['Do it for them', 'Teach it', 'A template', 'A monthly plan']
-        }],
-        prompt: '/course-platform What we sell: {product}',
-        writes: ['departments/sales/offer.md', 'products/product.md'],
-        done: 'the offer file says what you sell and who it\'s for.'
+        what: "Four ways to sell a fix: do it for them, teach it, make a template, or charge monthly. Claude makes a plan, then keeps building while you move on.",
+        prompt: '/product',
+        asks: 'What do we sell them, and what should they walk away with?',
+        options: ['We do it for them', 'We teach it', 'A template', 'A monthly plan'],
+        writes: ['departments/sales/offer.md', 'products/product-plan.md', 'products/product/'],
+        done: 'Claude says your offer and plan are saved. It keeps building in this chat, so start the next round in a new one.'
       },
       {
         name: 'Show me the money',
         what: "The price tells people who it's for. People judge a price by what sits next to it.",
-        picks: [{ key: 'price', label: 'The room picked', hint: 'Or your own price', options: ['$29', '$299', '$1,500'] }],
-        prompt: '/checkout Price it at {price}. Add a test checkout.',
-        writes: ['departments/sales/checkout.md'],
-        done: 'you can walk through the test checkout without paying anything.',
-        tip: '<b>Test card:</b> 4242 4242 4242 4242, any future date, any 3 numbers. No real money moves.'
+        prompt: '/pricing',
+        asks: 'What do we charge?',
+        options: ['$29', '$299', '$1,500'],
+        writes: ['departments/sales/offer.md'],
+        done: 'your offer shows the price and what it compares to.',
+        tip: "<b>No real payments today.</b> Connecting Stripe comes after the workshop."
       },
       {
         name: 'Name + brand',
         what: "A brand is a look and a voice. Change it once, and every asset using it updates.",
-        picks: [
-          { key: 'name', label: 'The name', hint: 'e.g. Leafline' },
-          { key: 'vibe', label: 'The vibe', hint: 'Or your own', options: ['Minimalist', 'Retro', 'Luxe', 'Neo-brutalist'] }
-        ],
-        prompt: "/brand-kit We're called {name}. The vibe is {vibe}. Build the brand and the voice.",
-        writes: ['brand/brand.md'],
-        done: 'the brand file has your colours, your fonts and how you sound.',
-        tools: [['Namelix', 'https://namelix.com'], ['Coolors', 'https://coolors.co'], ['Google Fonts', 'https://fonts.google.com']]
+        prompt: '/brand-kit',
+        asks: "What's it called, which style, and do you have a screenshot you like?",
+        options: ['Minimalist', 'Retro', 'Luxe', 'Neo-brutalist'],
+        writes: ['brand/brand.md', 'brand/brand.css'],
+        done: 'your product page has restyled by itself.',
+        tip: "<b>Want to copy a look?</b> Drag in a screenshot, not a link. A web page can hide instructions for the AI. Short on time? Say skip.",
+        tools: [['Awwwards', 'https://www.awwwards.com/websites/'], ['Namelix', 'https://namelix.com']]
       },
       {
-        name: 'The website',
-        what: "A homepage answers three questions: who's it for, what's the problem, and what do I do next?",
-        prompt: "/landing-page Build our homepage: who it's for, the problem, and what to do next.",
-        writes: ['departments/marketing/website.md', 'products/website/'],
-        done: 'the page opens in your browser, in your brand, selling your product.',
-        tip: "<b>Want Claude to copy a look?</b> Give it a screenshot, not a link. A web page can hide instructions for the AI.",
-        tools: [['Awwwards', 'https://www.awwwards.com'], ['One Page Love', 'https://onepagelove.com']]
-      },
-      {
-        name: 'The freebie',
-        what: "Give something useful first: a small, real win in exchange for an email.",
-        picks: [{ key: 'freebie', label: 'The room picked', hint: 'Or your own freebie', options: ['A checklist', 'A template', 'A quiz', 'A mini-guide'] }],
-        prompt: '/lead-magnet Make the freebie: {freebie}',
-        writes: ['departments/marketing/freebie.md'],
-        done: 'the freebie page opens and asks for an email.'
+        name: 'Lead Magnet',
+        what: "One page with one goal: give something useful in exchange for an email. Who's it for, what's the problem, and what do I do next?",
+        prompt: '/lead-magnet',
+        asks: "What's the free gift, and what's it about?",
+        options: ['A checklist', 'A template', 'A quiz', 'A mini-guide'],
+        writes: ['departments/marketing/lead-magnet.md', 'products/website/'],
+        done: '"Get it free" shows you the gift.'
       },
       {
         name: 'The CRM',
-        what: "Every lead remembers where it came from: who they are, where they found you, and how far along they are.",
-        prompt: '/crm-connect Save every freebie sign-up with where it came from.',
-        writes: ['departments/crm/leads.csv'],
-        done: 'you sign up on your freebie page, and a new row appears showing where it came from.',
-        tip: "<b>Test it yourself.</b> A made-up email is fine."
+        what: "Every lead remembers where it came from. Today we add the form and a mockup with sample data, and plan the database for later.",
+        prompt: '/crm-setup',
+        asks: 'Claude suggests one extra form question, then asks where people will find your page.',
+        writes: ['departments/crm/crm.md', 'products/crm/'],
+        done: 'you sign up on your Lead Magnet page, and you appear in the CRM with the sample leads.',
+        tip: "<b>Test it yourself.</b> A made-up email is fine. It stays in your browser."
       },
       {
-        name: 'Welcome emails',
-        what: "Emails that send themselves: one template, a trigger and a timer. Someone signs up, and the welcome email goes out.",
-        picks: [{ key: 'subject', label: 'The subject line the room picked', hint: 'Or your own subject line' }],
-        prompt: "/email-sequence Write the welcome emails. Email 1's subject line: {subject}",
-        writes: ['departments/emails/welcome-sequence/'],
-        done: 'you can preview the emails, and they sound like your brand without you asking.',
-        tip: "<b>Today these are previews.</b> Sending them for real comes after the workshop, in your homework.",
-        tools: [['Really Good Emails', 'https://reallygoodemails.com']]
+        name: 'Emails',
+        what: "Nurture emails after someone signs up, onboarding emails after they buy. Every email reads your customer, brand and gift.",
+        prompt: '/email-sequence',
+        asks: "Claude suggests 3 subject lines. Choose one, and say what a new customer should do first.",
+        writes: ['departments/emails/sequences/sequence.md', 'departments/emails/sequences/preview.html'],
+        done: 'you can read all 5 emails, and they sound like your brand without you asking.',
+        tip: "<b>Today these are previews.</b> Nothing gets sent. Sending them comes after the workshop."
       },
       {
         name: "Don't get robbed",
-        what: "An API key is a password that costs money. Keep keys in .env, and check before every push, not just once.",
+        what: "An API key is a password that costs money. Claude checks this folder for leaks, and your laptop for updates that close known security holes.",
         prompt: '/security-check',
+        asks: 'Have you added any API keys yet?',
+        options: ['No', 'Yes', "What's an API key?"],
         writes: [],
-        writesNote: 'A report in the chat. No new files.',
+        writesNote: 'A report in the chat. No new files, and nothing gets installed.',
         done: 'the report shows nothing critical, or Claude has told you how to fix it.',
-        tip: "<b>You don't need any keys today.</b> If you add one later, it goes in .env, never in a chat or a page.",
+        tip: "<b>Updates waiting?</b> Do them after the talk, because a big update can take a while.",
         tools: [['Have I Been Pwned', 'https://haveibeenpwned.com']]
       }
     ];
@@ -837,14 +829,14 @@
 
     // Multitasking graphic: the same four chats as the deck's conveyor belt slide.
     var MS_CHATS = [
-      { title: 'Freebie', folder: 'departments/marketing', prompt: [['/lead-magnet', 'skill'], [' a checklist for their 2am worry']], steps: ['Skill lead-magnet', 'Read customers/CLAUDE.md', 'Write lead-magnets/checklist'] },
-      { title: 'Brand voice', folder: 'brand', prompt: [['/brand-voice', 'skill'], [' work out how we should sound']], steps: ['Skill brand-voice', 'Read company/CLAUDE.md', 'Write brand/CLAUDE.md'] },
-      { title: 'Website', folder: 'products/website', prompt: [['Build the landing page from '], ['@brand/CLAUDE.md', 'file'], [' '], ['@customers/CLAUDE.md', 'file']], steps: ['Read brand/CLAUDE.md', 'Read customers/CLAUDE.md', 'Write products/website'] },
-      { title: 'CRM dashboard', folder: 'departments/crm', prompt: [['Show every new lead from '], ['@leads.example.csv', 'file']], steps: ['Read leads.example.csv', 'Read crm/CLAUDE.md', 'Write crm/dashboard'] }
+      { title: 'Product', folder: 'DISCOTECH', prompt: [['/product', 'skill']], steps: ['Read customer', 'Write offer and plan', 'Build the product page'] },
+      { title: 'Price', folder: 'DISCOTECH', prompt: [['/pricing', 'skill']], steps: ['Read offer', 'Read customer', 'Update offer'] },
+      { title: 'Brand', folder: 'DISCOTECH', prompt: [['/brand-kit', 'skill']], steps: ['Read customer', 'Read offer', 'Write brand'] },
+      { title: 'Lead Magnet', folder: 'DISCOTECH', prompt: [['/lead-magnet', 'skill']], steps: ['Read customer', 'Read brand', 'Build the page'] }
     ];
     var MS_MENU = {
-      skill: ['/brand-voice', '/lead-magnet', '/preflight'],
-      file: ['@brand/CLAUDE.md', '@company/CLAUDE.md', '@customers/CLAUDE.md', '@products/CLAUDE.md', '@leads.example.csv']
+      skill: ['/product', '/pricing', '/brand-kit', '/lead-magnet'],
+      file: []
     };
 
     // ════════════════════════════════════════════════════════════════
@@ -954,14 +946,13 @@
     var chipsEl = document.getElementById('chips');
 
     function renderCard(item, id, badge, labelColour, container, doneKey, onDone) {
-      var fields = (item.picks || []).map(function(p) {
-        var opts = (p.options || []).map(function(o) {
-          return '<button class="opt" type="button" data-key="' + esc(p.key) + '" data-val="' + esc(o) + '">' + esc(o) + '</button>';
-        }).join('');
-        return '<div class="field"><label for="' + id + '-' + p.key + '">' + esc(p.label) + '</label>' +
-          '<input id="' + id + '-' + p.key + '" data-key="' + esc(p.key) + '" type="text" autocomplete="off" placeholder="' + esc(p.hint || '') + '" value="' + esc(saved.picks[p.key] || '') + '">' +
-          (opts ? '<div class="opts">' + opts + '</div>' : '') + '</div>';
+      var answers = (item.options || []).map(function(o) {
+        return '<button class="opt" type="button" data-copy="' + esc(o) + '">' + esc(o) + '</button>';
       }).join('');
+      var asks = item.asks
+        ? '<p class="round__what" style="margin-bottom:10px">' + esc(item.asks) + '</p>' +
+          (answers ? '<div class="opts">' + answers + '</div>' : '')
+        : '';
 
       var num = 0;
       function step(title, body, done) {
@@ -992,9 +983,9 @@
         '<div class="card">' +
           (item.setup ? step(item.setup) : '') +
           step('Start a new chat in the DISCOTECH folder') +
-          (fields ? step('Fill this in', fields) : '') +
-          step('Copy this and paste it into Claude', chatbox(roundPromptHtml(item), id + '-prompt') + (item.tip ? '<div class="tip">' + item.tip + '</div>' : '')) +
-          step(writesList.length ? 'Send it. Claude writes' : 'Send it', writes, item.done) +
+          step('Copy this, paste it into Claude and send', chatbox(roundPromptHtml(item), id + '-prompt')) +
+          (asks ? step('Claude asks you. Answer with the room\'s pick, or your own', asks + (item.tip ? '<div class="tip">' + item.tip + '</div>' : '')) : '') +
+          step(writesList.length ? 'See it on your home page. Claude writes' : 'Read the report', writes, item.done) +
           '<div class="round__foot">' +
             '<label class="tick"><input type="checkbox"' + (saved.done[doneKey] ? ' checked' : '') + '> Done</label>' +
             (foot ? '<span class="tools">' + foot + '</span>' : '') +
@@ -1049,24 +1040,19 @@
       ROUNDS.concat(AFTER).forEach(function(item) {
         document.getElementById(item._promptId).innerHTML = roundPromptHtml(item);
       });
-      document.querySelectorAll('.opt').forEach(function(b) {
-        b.classList.toggle('opt--on', (saved.picks[b.dataset.key] || '') === b.dataset.val);
-      });
     }
-    pageEl.addEventListener('input', function(e) {
-      if (!e.target.dataset.key) return;
-      saved.picks[e.target.dataset.key] = e.target.value;
-      save();
-      refreshPrompts();
-    });
+    // Tap an answer to copy it, ready to paste into Claude.
     pageEl.addEventListener('click', function(e) {
       var b = e.target.closest('.opt');
       if (!b) return;
-      var key = b.dataset.key;
-      saved.picks[key] = saved.picks[key] === b.dataset.val ? '' : b.dataset.val;
-      b.closest('.field').querySelector('input').value = saved.picks[key];
-      save();
-      refreshPrompts();
+      var text = b.dataset.copy;
+      function flash() {
+        b.classList.add('opt--on');
+        b.textContent = '✓ Copied';
+        setTimeout(function() { b.classList.remove('opt--on'); b.textContent = text; }, 1400);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(flash, flash);
+      else flash();
     });
     refreshPrompts();
 

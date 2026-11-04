@@ -1,17 +1,15 @@
-# Brand — how we look and sound
+# Brand: how we look and sound
 
-**Filled in by:** Round 3 "Name That Brand" (`/brand-kit`)
-**Status:** empty until Round 3
+**Filled in by:** Round 4 (`/brand-kit`)
 
-Change the brand here once and every page, email and course screen picks it up.
+Change the brand here once and every page picks it up.
 
 | Reads from | Feeds into |
 |---|---|
-| `company/business.md`, `customers/personas/customer.md`, `votes/round-3.json` | Website, lead magnet, emails, course app |
+| `customers/personas/customer.md`, `departments/sales/offer.md` | Every page and email |
 
 ## Files
 
-- `brand-guidelines.md` — name, tagline, voice (do / don't), colours, fonts, logo usage
-- `design-tokens.json` — the same colours and fonts in a format code can read
-- `logo.svg` — the mark
-- `voice.md` — how we sound, in full: who's talking, personality, words we use and avoid, before/after examples, tweaks per channel. Written by `/brand-voice`. `brand-guidelines.md` keeps a short voice summary that points here.
+- `brand.md`: name, look and voice. The first line is the name.
+- `brand.css`: colours and fonts. Starts plain, and Round 4 replaces it. Pages only use its variables.
+- `voice.md`: optional and longer, written by `/brand-voice` after the workshop.

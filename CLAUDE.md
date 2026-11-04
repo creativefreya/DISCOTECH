@@ -14,57 +14,64 @@ Route each task to the folder that owns it, read that folder's `CLAUDE.md` first
 
 ## Business at a glance
 
-Each round adds a row. Keep this table current: it's the first thing any new AI session reads.
+The homework keeps this table current. Round skills leave it alone, and write to their own files.
 
 | What | Decision | Source file |
 |---|---|---|
-| Business | _not decided yet (Round 1)_ | `company/business.md` |
+| Business | See `company/business.md` once Round 1 is done | `company/business.md` |
 
 ## The compounding rule (MANDATORY)
 
-Every file here is context for everything after it.
+Every file here is context for everything after it. Write decisions into the markdown file that owns them, and read before you build. If it isn't in a file, the next chat won't know it. If a page disagrees with a markdown file, fix the markdown first, then the page.
 
-1. **Read before you write.** Before building anything, read `company/business.md`, every file in `customers/personas/`, `brand/brand-guidelines.md` and `brand/voice.md` (whichever exist yet), plus the `CLAUDE.md` of the folder you're working in.
-2. **Write it down.** Every decision goes into a markdown file in the folder that owns it. If it isn't in a file, the next session won't know it.
-3. **Markdown wins.** If an app disagrees with a markdown file, fix the markdown first, then rebuild the app.
-4. **Update the glance table** above when a round finishes.
+## How round skills work
 
-## Filling the gaps (how skills ask questions)
+Every round skill follows these steps, in this order. They exist so nobody can get lost.
 
-The skills here aren't written for one business. They work out the details from your files, and ask you only for what's missing. Every skill follows these steps:
+1. **Ask one question.** Use the skill's exact wording, then stop and wait. Don't read, write or plan first unless the skill says to. If their message already answers it, skip the question. If they say "you pick", choose sensibly and mark it `_(assumed)_`.
+2. **Read only the listed files.** Start your next message with `Reading: ` and their short names. If a file is missing, say so in one line, make a sensible assumption from their answer, mark it `_(assumed)_` and carry on. Never stop to send them back.
+3. **Write only the listed files, to the exact paths.** Ignore any other location or file name they suggest. Create a missing folder. Running a skill again overwrites its own files, with no `-v2` copies. Don't change anything else, including this file.
+4. **Keep it simple and local.** No web browsing, installs, build tools, git commands, accounts or API keys during a round.
+5. **Update the home page.** Run `node scripts/preview.mjs --ensure`. It prints the address and opens the browser the first time. Pages then refresh themselves, so never tell people to refresh or open files. If it prints `PREVIEW_FAILED`, give them the file path to open instead.
+6. **Check your work.** Confirm every listed file exists. Write any that's missing.
+7. **Finish in exactly this format,** then stop:
 
-1. **Look first.** List what the skill needs to know. Find each answer in the files above, or in `votes/round-N.json` for that round. Never ask for something a file already says.
-2. **If the room has voted, don't ask.** If that round's votes file exists, or the person says "quick" or "you pick", don't ask anything. Make a sensible choice from what's in the files, and mark it `_(assumed — change me)_` where you write it down.
-3. **Otherwise, ask only for what's missing.** At most 3 questions per message, in plain words. Give 2–4 suggested answers based on what you already know, so the person can just pick one. "You pick" is always a valid answer.
-4. **Save answers in the right file, straight away.** Each answer goes into the file that owns it (a voice answer goes in `brand/voice.md`, a customer detail in the persona). Then the next skill won't ask again. If an answer contradicts a file, update the file.
-5. **Never make up facts.** Prices, testimonials, customer results, qualifications, contact details, statistics and legal or medical claims come from the person or stay as a visible `[TODO: …]`. Placeholder copy is fine. Fake proof is not.
+```
+**You told me:** {their answer, in a few words}
+**I read:** {short file names, or "nothing yet"}
+**I made:** {each path, with a few plain words on what it is}
+**See it:** {the home page address}
+
+{the skill's "Your question"}
+
+**Next:** when the next round starts, open a new chat in this folder and run {the skill's "Next round"}.
+```
+
+If they answer your question, make the change in the same files, then repeat the format.
+
+**Never make up facts.** Testimonials, customer results, qualifications, contact details, statistics, and legal or medical claims come from the person or get left out. Sample data is always labelled as sample.
 
 ## Where things live
 
-| If the task is about… | Folder | Round |
+| Round | Skill | Folder |
 |---|---|---|
-| What the business is, the problem, how it makes money | `company/` | 1 |
-| Who the customers are (personas) | `customers/` | 1 |
-| What we sell (the offer, the product, the course) | `departments/sales/`, `products/`, `departments/content/` | 2 |
-| Name, colours, fonts, voice | `brand/` | 3 |
-| Website, social posts, ads | `departments/marketing/` + `products/website/` | 4 |
-| Lead magnets | `departments/marketing/lead-magnets/` | 5 |
-| Leads, contacts, where they came from | `departments/crm/` | 6 |
-| Email templates and sequences | `departments/emails/` | 7 |
-| Keeping it safe | `.env` (gitignored), `/security-check` | 8 |
-| Pricing and checkout | `departments/sales/` | 9 |
-| Agents that run things (inbox, follow-ups) | `departments/automation/` | after the talk |
-| What the room voted | `votes/` | all |
+| 1 Problem | `/pain-point` | `company/`, `customers/personas/` |
+| 2 Product | `/product` | `departments/sales/`, `products/` |
+| 3 Price | `/pricing` | `departments/sales/` |
+| 4 Name + brand | `/brand-kit` | `brand/` |
+| 5 Lead Magnet | `/lead-magnet` | `departments/marketing/`, `products/website/` |
+| 6 CRM | `/crm-setup` | `departments/crm/`, `products/crm/` |
+| 7 Emails | `/email-sequence` | `departments/emails/sequences/` |
+| 8 Security | `/security-check` | Writes nothing |
 
-## Skills
+Everything people make appears on the home page, `node scripts/preview.mjs --ensure`, usually `http://localhost:3000`. Agents that run things (inbox, follow-ups) go in `departments/automation/` after the talk.
+
+## Other skills
 
 | Skill | What it does |
 |---|---|
 | `/preflight` | Checks your laptop is ready (git, Node, this repo). Run it before the event. |
-| `/brand-voice` | Asks how the business should sound, then writes `brand/voice.md`. Every page, email and post reads it. |
-| `/lead-magnet` | Turns a topic into a free resource page that asks for an email to unlock the rest. Writes the plan and the page into `departments/marketing/lead-magnets/`. |
-
-More skills arrive on the day: run `git pull` at the start of the talk.
+| `/brand-voice` | For after the workshop: a longer interview about your real business, written to `brand/voice.md`. |
 
 ## The activity guide
 
@@ -73,5 +80,5 @@ More skills arrive on the day: run `git pull` at the start of the talk.
 ## Safety
 
 - Secrets (API keys, passwords) go in `.env` only. It's gitignored. Never paste a real key into any other file.
-- Following along needs **no** API keys: leads, emails and checkout all run locally.
+- Following along needs **no** API keys or accounts: everything runs on this laptop, with sample data and pretend actions.
 - Connecting real services comes after the show, in `HOMEWORK.md`. When the person asks about the homework or what to do after the workshop, read that file and follow its "Claude: how to walk someone through this" section. Keys from those services go in `.env` and the hosting dashboard, never in page code. Don't ask for a key in chat: tell the person which line of `.env` to paste it into.

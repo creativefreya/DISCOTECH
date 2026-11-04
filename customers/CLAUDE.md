@@ -1,18 +1,11 @@
-# ICP — who we're solving for
+# Customers: who we're solving for
 
-**Filled in by:** Round 1 "The Problem" (`/customer-profile`, right after `/pain-point`)
-**Status:** empty until Round 1
-
-ICP = ideal customer profile. Three personas, because later rounds need different customers.
+**Filled in by:** Round 1 (`/pain-point`)
 
 | Reads from | Feeds into |
 |---|---|
-| `company/business.md`, `votes/round-1-2am.json` (what they'd pay to get back: time, money, health or relationships) | Brand voice, website copy, lead magnet, emails, course, offer |
+| Their answer in Round 1 | Product, price, brand, lead magnet, CRM, emails |
 
 ## Files
 
-- `personas/customer.md` — the person who pays us (shaped by the room's votes)
-- `personas/referral-partner.md` — people who send us customers
-- `personas/student.md` — someone who wants to learn to do what we do (feeds the course)
-
-Each persona covers: who they are, their situation, what keeps them up at 2am, what they've tried, words they use, what would make them say yes, where to find them.
+- `personas/customer.md`: who they are, what keeps them up at 2am, what they've tried, the words they use, what makes them say yes, and where to find them.

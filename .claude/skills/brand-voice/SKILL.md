@@ -7,7 +7,7 @@ description: Work out how this business should sound (who's talking, personality
 
 You're writing the voice guide every other skill reads before writing words: website, lead magnet, emails, posts, course. One file: `brand/voice.md`.
 
-Follow **Filling the gaps** in the root `CLAUDE.md`: look first, ask only for what's missing, save answers straight away, never make up facts.
+Look first, ask only for what's missing, save answers straight away, and never make up facts.
 
 ## 1. Look first
 
@@ -15,15 +15,14 @@ Read whichever of these exist:
 
 - `company/business.md` — what the business does, for whom
 - `customers/personas/*.md` — who's reading, the words they use, what worries them
-- `brand/brand-guidelines.md` — name, vibe, any voice notes from Round 3
+- `brand/brand.md` — name, look and the short voice notes from Round 4
 - `brand/voice.md` — if it exists, you're **updating** it, not starting again
-- `votes/round-3.json` (brand vibe) and `votes/round-7.json` (email tone), if present
 
 From those, fill in as much of the template below as you can. Note which parts are still blank.
 
-## 2. The room has voted, or "quick"
+## 2. "Quick" or "you pick"
 
-If the votes cover tone, or the person says "quick" / "you pick": skip the interview. Base the voice on the vibe and tone votes, plus the main persona's situation. Mark guesses `_(assumed — change me)_`. Go to step 4.
+If the person says "quick" or "you pick": skip the interview. Base the voice on `brand/brand.md` and the customer's situation. Mark guesses `_(assumed — change me)_`. Go to step 4.
 
 ## 3. Ask only for what's missing
 
@@ -53,7 +52,7 @@ At most 3 questions per message. Give 2–4 suggested answers for each, based on
 
 ## 5. Connect it
 
-- If `brand/brand-guidelines.md` exists, make sure its voice section is a short summary (3 traits + the formality level) that ends with `Full guide: brand/voice.md`. Don't keep two full copies that can disagree.
+- If `brand/brand.md` exists, make sure its voice section is a short summary (3 traits + the formality level) that ends with `Full guide: brand/voice.md`. Don't keep two full copies that can disagree.
 - Add or update the **Voice** row in the root `CLAUDE.md` "Business at a glance" table: the 3 traits, with source `brand/voice.md`.
 
 ## Template — `brand/voice.md`
