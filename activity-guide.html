@@ -599,7 +599,7 @@
       <p class="section-desc">Each round gets its own chat. When Claude says it's done, or Round 2 tells you to move on, start the next round in a new chat.</p>
       <div class="tip" style="margin-bottom:18px"><b>Do this once: choose Auto.</b> Under the chat box, open the mode menu and pick <b>Auto</b>, so Claude isn't stopping to ask about every file. Don't see it? Pick <b>Accept edits</b>.</div>
       <div class="tip" style="margin-bottom:18px"><b>Claude says it doesn't know the skill?</b> That chat is in the wrong folder. Start a new chat and choose DISCOTECH. If you cloned early, it may be called techella-unlikely-gameshow.</div>
-      <div class="tip" style="margin-bottom:18px"><b>Your home page:</b> after Round 1, everything you make appears at <a href="http://localhost:3000" target="_blank" rel="noopener"><b>localhost:3000</b></a> and updates itself. Claude gives you the exact link. Keep that tab open.</div>
+      <div class="tip" style="margin-bottom:18px"><b>Your home page:</b> Round 1 answers in your chat. From Round 2, every page you make appears at <a href="http://localhost:3000" target="_blank" rel="noopener"><b>localhost:3000</b></a> and updates itself. Claude gives you the exact link. Keep that tab open.</div>
       <div class="ms" id="ms" aria-label="Four Claude chats running side by side in split view" role="img">
         <div class="ms__bar">
           <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
@@ -741,7 +741,8 @@
         asks: 'Who are we helping, and with what?',
         options: ['A best man dreading the wedding speech', 'A plant parent whose plants keep dying', 'An office worker whose dog is bored', 'A person with ADHD who keeps forgetting birthdays'],
         writes: ['company/business.md', 'customers/personas/customer.md'],
-        done: 'your home page opens at localhost, and your customer sounds like a real person.'
+        inChat: true,
+        done: 'Claude shows you the customer in the chat, and they sound like a real person.'
       },
       {
         name: 'The product',
@@ -984,7 +985,7 @@
           step('Start a new chat in the DISCOTECH folder') +
           step('Copy this, paste it into Claude and send', chatbox(roundPromptHtml(item), id + '-prompt')) +
           (asks ? step('Claude asks you. Answer with the room\'s pick, or your own', asks + (item.tip ? '<div class="tip">' + item.tip + '</div>' : '')) : '') +
-          step(writesList.length ? 'See it on your home page. Claude writes' : 'Read the report', writes, item.done) +
+          step(item.inChat ? 'Read it in your chat. Claude writes' : writesList.length ? 'See it on your home page. Claude writes' : 'Read the report', writes, item.done) +
           '<div class="round__foot">' +
             '<label class="tick"><input type="checkbox"' + (saved.done[doneKey] ? ' checked' : '') + '> Done</label>' +
             (foot ? '<span class="tools">' + foot + '</span>' : '') +

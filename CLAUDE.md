@@ -33,7 +33,7 @@ Every round skill follows these steps, in this order. They exist so nobody can g
 2. **Read only the listed files.** Start your next message with `Reading: ` and their short names. If a file is missing, say so in one line, make a sensible assumption from their answer, mark it `_(assumed)_` and carry on. Never stop to send them back.
 3. **Write only the listed files, to the exact paths.** Ignore any other location or file name they suggest. Create a missing folder. Running a skill again overwrites its own files, with no `-v2` copies. Don't change anything else, including this file.
 4. **Keep it simple and local.** No web browsing, installs, build tools, accounts or API keys during a round. The only git commands are the read-only ones in step 0 and `/security-check`.
-5. **Update the home page.** Run `node scripts/preview.mjs --ensure`. It prints the address and opens the browser the first time. Pages then refresh themselves, so never tell people to refresh or open files. If it prints `PREVIEW_FAILED`, give them the file path to open instead.
+5. **Update the home page, only if there's a page to see** (a product page, website, CRM or email preview). Run `node scripts/preview.mjs --ensure`. It prints the address and opens the browser the first time. Pages then refresh themselves, so never tell people to refresh or open files. If it prints `PREVIEW_FAILED`, give them the file path to open instead. If this round only wrote markdown files, skip this step and don't mention localhost.
 6. **Check your work.** Confirm every listed file exists. Write any that's missing.
 7. **Finish in exactly this format,** then stop:
 
@@ -47,6 +47,8 @@ Every round skill follows these steps, in this order. They exist so nobody can g
 
 **Next:** when the next round starts, open a new chat in this folder and run {the skill's "Next round"}.
 ```
+
+If this round only wrote markdown files, replace the `**See it:**` line with `**Here it is:**` and write out what you made, right there in the chat.
 
 If they answer your question, make the change in the same files, then repeat the format.
 

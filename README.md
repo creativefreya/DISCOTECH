@@ -24,7 +24,7 @@ Green ticks = you're ready.
 git pull
 ```
 
-This gets the round skills. Then each round is one skill and one question, and everything you make appears at `localhost:3000`.
+This gets the round skills. Then each round is one skill and one question, Round 1 answers right in the chat, and from Round 2 every page you make appears at `localhost:3000`.
 
 ## Why this exists
 
