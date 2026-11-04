@@ -1,14 +1,12 @@
 # Emails
 
-**Filled in by:** Round 7 "You've Got Mail" (`/email-sequence`)
-**Status:** empty until Round 7
+**Filled in by:** Round 7 (`/email-sequence`)
 
 | Reads from | Feeds into |
 |---|---|
-| Brand, `customers/personas/customer.md`, `departments/marketing/lead-magnets/`, `votes/round-7.json` | Sent to every new lead in the CRM |
+| Customer, offer, brand, lead magnet, CRM plan | Sent after the workshop, through Resend |
 
 ## Files
 
-- `welcome-sequence/01-welcome.md`, `02-the-story.md`, `03-the-offer.md` — subject, preview text, body, when it sends
-- `newsletter/` — weekly emails, after the talk
-- `previews/` — HTML versions you can open in a browser
+- `sequences/sequence.md`: 3 nurture emails after they sign up, and 2 onboarding emails after they buy.
+- `sequences/preview.html`: how they look. Nothing gets sent today.

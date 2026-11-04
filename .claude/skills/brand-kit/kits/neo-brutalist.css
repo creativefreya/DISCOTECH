@@ -1,0 +1,3 @@
+/* Neo-brutalist: bright, thick outlines, hard shadows */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;600;700&display=swap');
+:root { --bg:#fff7d6; --surface:#ffffff; --text:#000000; --muted:#333333; --border:#000000; --accent:#ff5c8a; --accent-text:#000000; --font-heading:'Archivo Black',Impact,sans-serif; --font-body:'Space Grotesk',system-ui,sans-serif; --radius:0; --border-width:3px; --shadow:6px 6px 0 #000000; --heading-weight:400; }

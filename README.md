@@ -24,7 +24,7 @@ Green ticks = you're ready.
 git pull
 ```
 
-This gets the round skills and the room's votes as they happen.
+This gets the round skills. Then each round is one skill and one question, and everything you make appears at `localhost:3000`.
 
 ## Why this exists
 
@@ -42,17 +42,14 @@ Here, every department is a folder. Every decision is a markdown file. Each roun
 
 | Round | Name | Skill | Writes |
 |---|---|---|---|
-| 1 | The Problem | `/pain-point` + `/customer-profile` | `company/business.md`, `customers/personas/customer.md` (+ `referral-partner.md`, `student.md`) |
-| 2 | Something to Sell | `/course-platform` | `departments/sales/offer.md`, `products/product.md` (+ `departments/content/`, `products/course/` if it's a course) |
-| 3 | Name That Brand | `/brand-kit` + `/brand-voice` | `brand/brand-guidelines.md`, `design-tokens.json`, `voice.md` |
-| 4 | Front Door | `/landing-page` | `departments/marketing/website.md`, `products/website/` |
-| 5 | The Bait | `/lead-magnet` | `departments/marketing/lead-magnets/` |
-| 6 | The Little Black Book | `/crm-connect` | `departments/crm/leads.csv` |
-| 7 | You've Got Mail | `/email-sequence` | `departments/emails/welcome-sequence/` |
-| 8 | Don't Get Robbed | `/security-check` | a report (nothing to commit) |
-| 9 | Show Me the Money | `/checkout` | the price in `departments/sales/offer.md`, buy button on the website |
-
-Skills for the rounds land on the day via `git pull`.
+| 1 | Problem | `/pain-point` | `company/business.md`, `customers/personas/customer.md` |
+| 2 | Product | `/product` | `departments/sales/offer.md`, `products/product-plan.md`, `products/product/` |
+| 3 | Price | `/pricing` | Updates `departments/sales/offer.md` and the product page |
+| 4 | Name + brand | `/brand-kit` | `brand/brand.md`, `brand/brand.css` |
+| 5 | Lead Magnet | `/lead-magnet` | `departments/marketing/lead-magnet.md`, `products/website/` |
+| 6 | CRM | `/crm-setup` | `departments/crm/crm.md`, `products/crm/` |
+| 7 | Emails | `/email-sequence` | `departments/emails/sequences/` |
+| 8 | Security | `/security-check` | A report in the chat |
 
 ## Folder structure
 
@@ -60,17 +57,17 @@ Skills for the rounds land on the day via `git pull`.
 CLAUDE.md            ← the business's memory: AI reads this first
 TODO.md              ← what's next, for everyone
 company/             ← what the business is (Round 1)
-customers/           ← who we serve: personas/ (Round 1)
-brand/               ← how we look and sound (Round 3)
+customers/           ← who we serve (Round 1)
+brand/               ← how we look and sound (Round 4)
 departments/
-  marketing/         ← website plan (Round 4), lead-magnets/ (Round 5)
-  sales/             ← the offer (Round 2) and price (Round 9)
-  content/           ← the course, if that's the product (Round 2)
-  crm/               ← every lead, and where they came from (Round 6)
-  emails/            ← what we send (Round 7)
+  sales/             ← the offer and price (Rounds 2 and 3)
+  marketing/         ← the lead magnet (Round 5)
+  crm/               ← the CRM and backend plan (Round 6)
+  emails/            ← nurture and onboarding emails (Round 7)
+  content/           ← course material, after the talk
   automation/        ← agents that run it, after the talk
-products/            ← what we make and sell (Round 2), and the pages people see: website/, course/
-votes/               ← what the room voted, per round
+products/            ← the pages people see (Rounds 2, 5 and 6)
+scripts/             ← the home page and the laptop check
 ```
 
 ## After the show: homework

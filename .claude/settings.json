@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(node scripts/preview.mjs --ensure*)",
+      "Bash(node scripts/machine-check.mjs*)",
+      "Bash(node scripts/check-contrast.mjs*)",
+      "Bash(git rev-parse --show-toplevel)",
+      "Bash(git ls-files*)",
+      "Bash(git check-ignore*)",
+      "Bash(git log*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)"
+    ]
+  }
+}

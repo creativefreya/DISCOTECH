@@ -1,13 +1,12 @@
-# Products — what we make and sell, and the pages people see
+# Products: what we make and sell, and the pages people see
 
-Built from the markdown in `company/`, `customers/`, `brand/` and `departments/`. If a product and a markdown file disagree, the markdown wins: fix the doc, then rebuild the product.
+Built from the markdown in `company/`, `customers/`, `brand/` and `departments/`. If a page and a markdown file disagree, the markdown wins.
 
 | Folder | Built in | Plan lives in |
 |---|---|---|
-| `product.md` | Round 2 | `departments/sales/offer.md` |
-| `website/` | Round 4 | `departments/marketing/website.md` |
-| `course/` | Round 2 (if the product is a course) | `departments/content/curriculum.md` |
+| `product/` | Round 2 | `product-plan.md`, `departments/sales/offer.md` |
+| `website/` | Round 5 | `departments/marketing/lead-magnet.md` |
+| `crm/` | Round 6 | `departments/crm/crm.md` |
+| `shared/` | Ready-made | Page styles, form and CRM code. Don't edit during a round. |
 
-Lead magnet pages live next to their plans in `departments/marketing/lead-magnets/`.
-
-All plain HTML/CSS/JS. Open the `index.html` in a browser to see it.
+All plain HTML, CSS and JS. Everything appears on the home page at `localhost:3000`.
