@@ -129,7 +129,8 @@ function linkFor(p) { return p.endsWith('.md') ? `/view?file=${encodeURIComponen
 function home() {
   const cards = ROUNDS.map((r) => {
     const done = roundDone(r);
-    const links = r.files.filter(([p]) => existsSync(join(ROOT, p))).map(([p, label]) => `<a class="pill" href="${linkFor(p)}">${esc(label)}</a>`).join('');
+    // A round that updates an earlier round's file hasn't started until its own change is there.
+    const links = r.needs && !done ? '' : r.files.filter(([p]) => existsSync(join(ROOT, p))).map(([p, label]) => `<a class="pill" href="${linkFor(p)}">${esc(label)}</a>`).join('');
     return `<article class="card round ${done ? 'round--done' : 'round--waiting'}"><p class="eyebrow">Round ${r.n}</p><h2>${esc(r.name)}</h2>${done ? `<div class="pills">${links}</div>` : `<p class="muted">${links ? 'Building now…' : 'Waiting for this round'}</p>`}${done || !links ? '' : `<div class="pills">${links}</div>`}</article>`;
   }).join('');
   return shell(brandName(), `<main class="wrap"><header class="hero hero--small"><p class="eyebrow">Everything we've made</p><h1>${esc(brandName())}</h1><p class="lede">This page fills itself in as you finish each round. Leave it open.</p><p><a class="pill" href="/activity-guide.html">Activity guide</a></p></header><section class="grid">${cards}</section><footer class="footer">Only you can see this. It runs on your laptop.</footer></main>`);
