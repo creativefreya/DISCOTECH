@@ -598,8 +598,8 @@
       <h2 class="section-title">Multitasking with Claude</h2>
       <p class="section-desc">Each round gets its own chat. When Claude says it's done, or Round 2 tells you to move on, start the next round in a new chat.</p>
       <div class="tip" style="margin-bottom:18px"><b>Do this once: choose Auto.</b> Under the chat box, open the mode menu and pick <b>Auto</b>, so Claude isn't stopping to ask about every file. Don't see it? Pick <b>Accept edits</b>.</div>
-      <div class="tip" style="margin-bottom:18px"><b>Claude says it doesn't know the skill?</b> That chat is in the wrong folder. Start a new chat and choose DISCOTECH.</div>
-      <div class="tip" style="margin-bottom:18px"><b>Your home page:</b> after Round 1, everything you make appears at <b>localhost:3000</b> and updates itself. Keep that tab open.</div>
+      <div class="tip" style="margin-bottom:18px"><b>Claude says it doesn't know the skill?</b> That chat is in the wrong folder. Start a new chat and choose DISCOTECH. If you cloned early, it may be called techella-unlikely-gameshow.</div>
+      <div class="tip" style="margin-bottom:18px"><b>Your home page:</b> after Round 1, everything you make appears at <a href="http://localhost:3000" target="_blank" rel="noopener"><b>localhost:3000</b></a> and updates itself. Claude gives you the exact link. Keep that tab open.</div>
       <div class="ms" id="ms" aria-label="Four Claude chats running side by side in split view" role="img">
         <div class="ms__bar">
           <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
@@ -651,9 +651,9 @@
     <section class="section" id="rounds-wrap">
       <span class="label label--green">THE ROUNDS</span>
       <h2 class="section-title">Build the business</h2>
-      <p class="section-desc">Paste the skill and Claude asks you one question. Answer with what the room picked, or your own idea. Tap an answer below to copy it.</p>
+      <p class="section-desc">Paste the skill and Claude asks you one question. Answer with what the room picked, or your own idea. Where there are buttons, tap one to copy it.</p>
       <div id="rounds"></div>
-      <button class="clear" id="clear" type="button">Clear my answers</button>
+      <button class="clear" id="clear" type="button">Clear my ticks</button>
     </section>
 
     <!-- ═══ WHY IT WORKS ═══ -->
@@ -662,7 +662,7 @@
       <h2 class="section-title">The folder remembers</h2>
       <div class="card why-card">
         <p>Every round writes its decisions into a file in your folder. The next round reads those files before it does anything.</p>
-        <p><strong>That's why the prompts stay short.</strong> By Round 7, the emails already know your customer, your brand and your freebie, and you never explained them twice.</p>
+        <p><strong>That's why the prompts stay short.</strong> By Round 7, the emails already know your customer, your brand and your free gift, and you never explained them twice.</p>
       </div>
     </section>
 
@@ -670,7 +670,7 @@
     <div class="part part--after" id="after">
       <p class="part__kicker">PART 2</p>
       <h2 class="part__title">AFTER THE WORKSHOP</h2>
-      <p class="part__desc"><strong>Connect the plumbing.</strong> You built the website, leads list, emails and checkout, but they're only on your laptop. One prompt takes you through connecting it all, so strangers can find it, sign up and pay.</p>
+      <p class="part__desc"><strong>Connect the plumbing.</strong> You built the product, Lead Magnet page, CRM mockup and emails, but they're only on your laptop. One prompt takes you through connecting it all, so strangers can find it, sign up and pay.</p>
     </div>
 
     <section class="section" id="after-steps">
@@ -687,11 +687,11 @@
         <p><strong>3. Connects the plumbing,</strong> one step at a time:</p>
       </div>
       <div class="plumb" style="margin-top: 8px;">
-        <div class="plumb__row"><span class="plumb__from">🌐 Your website</span><span class="plumb__arrow" aria-hidden="true">→</span><span class="plumb__to"><b>Netlify</b>Free hosting + your own domain</span></div>
         <div class="plumb__row"><span class="plumb__from">📇 Your CRM</span><span class="plumb__arrow" aria-hidden="true">→</span><span class="plumb__to"><b>Neon</b>A real database</span></div>
         <div class="plumb__row"><span class="plumb__from">✉️ Your emails</span><span class="plumb__arrow" aria-hidden="true">→</span><span class="plumb__to"><b>Resend</b>Sends them for real</span></div>
         <div class="plumb__row"><span class="plumb__from">💳 Your checkout</span><span class="plumb__arrow" aria-hidden="true">→</span><span class="plumb__to"><b>Stripe</b>Products, checkout links + paid customers</span></div>
         <div class="plumb__row"><span class="plumb__from">📦 Your product</span><span class="plumb__arrow" aria-hidden="true">→</span><span class="plumb__to"><b>Delivery</b>Gets it to people who paid</span></div>
+        <div class="plumb__row"><span class="plumb__from">🌐 Your website</span><span class="plumb__arrow" aria-hidden="true">→</span><span class="plumb__to"><b>Netlify</b>Free hosting + your own domain</span></div>
       </div>
     </section>
 
@@ -747,8 +747,7 @@
         name: 'The product',
         what: "Four ways to sell a fix: do it for them, teach it, make a template, or build an app. Claude makes a plan, then keeps building while you move on.",
         prompt: '/product',
-        asks: 'What do we sell them, and what should they walk away with?',
-        options: ['We do it for them', 'We teach it', 'A template', 'An app'],
+        asks: 'What do we sell them, and what should they walk away with? Type the words on the big screen, or your own.',
         writes: ['departments/sales/offer.md', 'products/product-plan.md', 'products/product/'],
         done: 'Claude says your offer and plan are saved. It keeps building in this chat, so start the next round in a new one.'
       },
@@ -766,7 +765,7 @@
         name: 'Name + brand',
         what: "A brand is a look and a voice. Change it once, and every asset using it updates.",
         prompt: '/brand-kit',
-        asks: "What's it called, which style, and do you have a screenshot you like?",
+        asks: "What's it called, which style, and do you have a screenshot you like? Tap a style to copy it, and add the room's name.",
         options: ['Minimalist', 'Retro', 'Luxe', 'Neo-brutalist'],
         writes: ['brand/brand.md', 'brand/brand.css'],
         done: 'your product page has restyled by itself.',
@@ -777,8 +776,7 @@
         name: 'Lead Magnet',
         what: "One page with one goal: give something useful in exchange for an email. Who's it for, what's the problem, and what do I do next?",
         prompt: '/lead-magnet',
-        asks: "What's the free gift, and what's it about?",
-        options: ['A checklist', 'A template', 'A quiz', 'A mini-guide'],
+        asks: "What's the free gift, and what's it about? Type the words on the big screen, or your own.",
         writes: ['departments/marketing/lead-magnet.md', 'products/website/'],
         done: '"Get it free" shows you the gift.'
       },
@@ -792,7 +790,7 @@
         tip: "<b>Test it yourself.</b> A made-up email is fine. It stays in your browser."
       },
       {
-        name: 'Emails',
+        name: 'Email onboarding',
         what: "Nurture emails after someone signs up, onboarding emails after they buy. Every email reads your customer, brand and gift.",
         prompt: '/email-sequence',
         asks: "Claude suggests 3 subject lines. Choose one, and say what a new customer should do first.",
@@ -1052,13 +1050,25 @@
         b.textContent = '✓ Copied';
         setTimeout(function() { b.classList.remove('opt--on'); b.textContent = text; }, 1400);
       }
-      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(flash, flash);
-      else flash();
+      function fallback() {
+        var t = document.createElement('textarea');
+        t.value = text;
+        t.setAttribute('readonly', '');
+        t.style.position = 'fixed';
+        t.style.opacity = '0';
+        document.body.appendChild(t);
+        t.select();
+        try { document.execCommand('copy'); } catch (err) {}
+        document.body.removeChild(t);
+        flash();
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(flash, fallback);
+      else fallback();
     });
     refreshPrompts();
 
     document.getElementById('clear').addEventListener('click', function() {
-      if (!window.confirm('Clear your answers and ticks on this page? Your Claude files stay as they are.')) return;
+      if (!window.confirm('Clear the ticks on this page? Your Claude files stay as they are.')) return;
       saved = { picks: {}, done: {} };
       save();
       document.querySelectorAll('main input[type=text]').forEach(function(i) { i.value = ''; });

@@ -16,13 +16,13 @@ const FIRST_PORT = 3000;
 const LAST_PORT = 3009;
 
 const ROUNDS = [
-  { n: 1, name: 'Problem', files: [['company/business.md', 'Business'], ['customers/personas/customer.md', 'Customer']] },
-  { n: 2, name: 'Product', files: [['products/product/index.html', 'Product page'], ['departments/sales/offer.md', 'Offer'], ['products/product-plan.md', 'Build plan']] },
-  { n: 3, name: 'Price', files: [['departments/sales/offer.md', 'Offer with price']], needs: '## Price' },
+  { n: 1, name: 'The problem', files: [['company/business.md', 'Business'], ['customers/personas/customer.md', 'Customer']] },
+  { n: 2, name: 'The product', files: [['products/product/index.html', 'Product page'], ['departments/sales/offer.md', 'Offer'], ['products/product-plan.md', 'Build plan']] },
+  { n: 3, name: 'Show me the money', files: [['departments/sales/offer.md', 'Offer with price']], needs: '## Price' },
   { n: 4, name: 'Name + brand', files: [['brand/brand.md', 'Brand and voice']] },
   { n: 5, name: 'Lead Magnet', files: [['products/website/index.html', 'Lead Magnet page'], ['departments/marketing/lead-magnet.md', 'The gift']] },
-  { n: 6, name: 'CRM', files: [['products/crm/index.html', 'CRM mockup'], ['departments/crm/crm.md', 'CRM and backend plan']] },
-  { n: 7, name: 'Emails', files: [['departments/emails/sequences/preview.html', 'Email previews'], ['departments/emails/sequences/sequence.md', 'The sequence']] },
+  { n: 6, name: 'The CRM', files: [['products/crm/index.html', 'CRM mockup'], ['departments/crm/crm.md', 'CRM and backend plan']] },
+  { n: 7, name: 'Email onboarding', files: [['departments/emails/sequences/preview.html', 'Email previews'], ['departments/emails/sequences/sequence.md', 'The sequence']] },
 ];
 
 // Only these can be served. Everything else, including .env, gets a 404.

@@ -41,7 +41,7 @@ Every round skill follows these steps, in this order. They exist so nobody can g
 **You told me:** {their answer, in a few words}
 **I read:** {short file names, or "nothing yet"}
 **I made:** {each path, with a few plain words on what it is}
-**See it:** {the home page address, plus anything the skill's Finish section says to point out}
+**See it:** [localhost:3000](http://localhost:3000) {using the real address, plus anything the skill's Finish section says to point out}
 
 {the skill's "Your question"}
 
@@ -49,6 +49,8 @@ Every round skill follows these steps, in this order. They exist so nobody can g
 ```
 
 If they answer your question, make the change in the same files, then repeat the format.
+
+**Make every web address clickable.** In chat and markdown, write `[localhost:3000](http://localhost:3000)`, never a bare address, including any address a script prints. On pages, use `<a href>`. The only exception is inside a code block or a prompt to copy.
 
 **Never make up facts.** Testimonials, customer results, qualifications, contact details, statistics, and legal or medical claims come from the person or get left out. Sample data is always labelled as sample.
 
@@ -65,7 +67,7 @@ If they answer your question, make the change in the same files, then repeat the
 | 7 Emails | `/email-sequence` | `departments/emails/sequences/` |
 | 8 Security | `/security-check` | Writes nothing |
 
-Everything people make appears on the home page, `node scripts/preview.mjs --ensure`, usually `http://localhost:3000`. Agents that run things (inbox, follow-ups) go in `departments/automation/` after the talk.
+Everything people make appears on the home page, `node scripts/preview.mjs --ensure`, usually [localhost:3000](http://localhost:3000). Agents that run things (inbox, follow-ups) go in `departments/automation/` after the talk.
 
 ## Other skills
 

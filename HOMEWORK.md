@@ -44,6 +44,7 @@ The person may never have used a terminal, and may be doing this days after the 
 - **Start at Step 0 every time.** Then recommend the first step that isn't done. Before calling a step done, check it's really working, using its "It worked when" line. A key in `.env` doesn't prove anything is connected.
 - **One step at a time.** Say what it does and what it costs, and ask whether to do it now. They make the accounts and click the dashboard buttons, so tell them exactly what to click, and wait. "That's enough for today" is a fine answer.
 - **Before every push, check for keys.** Use `/security-check` if it's in this folder. If not, search every file Git would save for anything shaped like a key. If you find one, stop: don't push, and don't repeat the key back. Help them move it to `.env`, and if it has ever been pushed or shared, tell them to make a new one. Confirm `.env` and `departments/crm/leads.csv` are ignored by Git.
+- **Write every web address as a clickable link.**
 - **Never ask for a key, password, token or database address in chat, and never print one.** Don't read `.env` out. If they paste a key anyway, don't save it, and tell them to make a new one.
 - **Use a matching skill if it's here** (such as `/security-check` or `/brand-voice`). If not, do the work directly from these steps and the `CLAUDE.md` in the folder that owns it.
 - **Never push to Freya's repo, make their repo public, charge anyone or take Stripe live without asking.** Never make up prices, testimonials or results, or write legal wording as if it's been checked. Leave a visible `[TODO: …]`.
@@ -65,7 +66,7 @@ Right now this folder is linked to Freya's public starter repo. Your copy holds 
 
 GitHub's Fork button can't make a private copy of a public repo, so this creates a new private one, and keeps Freya's connected so you can still get updates.
 
-1. Make a free account at https://github.com if you don't have one.
+1. Make a free account at [github.com](https://github.com) if you don't have one.
 2. Ask Claude:
 
 ```
@@ -78,7 +79,7 @@ To get Freya's updates later: `git pull upstream main`.
 
 ## Step 2 · Save real leads with Neon
 
-Until now, the form saves sign-ups in your own browser, and the CRM shows sample leads. Neon (https://neon.com) gives you a real database, so every sign-up lands in one place, with where it came from and how far along they are. Your plan for this is already in `departments/crm/crm.md`.
+Until now, the form saves sign-ups in your own browser, and the CRM shows sample leads. [Neon](https://neon.com) gives you a real database, so every sign-up lands in one place, with where it came from and how far along they are. Your plan for this is already in `departments/crm/crm.md`.
 
 Make a free account and a project, then ask Claude:
 
@@ -90,7 +91,7 @@ Follow the backend plan in departments/crm/crm.md and connect my form to a Neon 
 
 ## Step 3 · Send the emails with Resend
 
-Resend (https://resend.com) sends the emails in `departments/emails/sequences/`. Until you verify a domain in Step 6, it only sends to your own address, which is fine for testing.
+[Resend](https://resend.com) sends the emails in `departments/emails/sequences/`. Until you verify a domain in Step 6, it only sends to your own address, which is fine for testing.
 
 1. Make a free account, and create an API key (Resend dashboard → API Keys). Don't paste it anywhere yet.
 2. Ask Claude:
@@ -105,7 +106,7 @@ Marketing emails have legal rules, like the unsubscribe link and honest sender d
 
 ## Step 4 · Set up products and checkout links with Stripe
 
-Stripe (https://stripe.com) makes your Buy button real. Stay in **test mode** for this whole step: nobody gets charged, and you can try it as many times as you like.
+[Stripe](https://stripe.com) makes your Buy button real. Stay in **test mode** for this whole step: nobody gets charged, and you can try it as many times as you like.
 
 1. Make an account and switch on test mode.
 2. In the Stripe dashboard, add your **product** at the price in `departments/sales/offer.md`. If people pay monthly or yearly, like for an app, choose a recurring price.
@@ -144,7 +145,7 @@ Help me choose a domain for this business, then walk me through verifying it in 
 
 ## Step 7 · Put it online with Netlify
 
-Do this last, when everything works on your laptop. Netlify (https://www.netlify.com) hosts your site for free, and every push updates it. Make an account, then run `/security-check` and fix anything critical. Then ask Claude:
+Do this last, when everything works on your laptop. [Netlify](https://www.netlify.com) hosts your site for free, and every push updates it. Make an account, then run `/security-check` and fix anything critical. Then ask Claude:
 
 ```
 Put my site online with Netlify, connected to my private GitHub repo. Publish only the public pages: products/website, products/product, products/shared and brand/brand.css, keeping their paths, with the home address going to products/website. Never publish the repo root, products/crm or any markdown file, because they're private. Copy my .env values into Netlify's settings and walk me through it, never showing a value. Point my domain at the site. Set the Stripe webhook and the payment link's thank-you address to the live site. Check for keys before you push. Walk me through any clicks in the dashboard.
@@ -166,4 +167,4 @@ Help me go live. Check for keys. Make sure no test sign-ups are in my database. 
 
 Your business now has a website, its own address, a database, emails and a till, and you own every file.
 
-**Stuck, or want help connecting yours?** Book a free call with Freya: https://calendar.app.google/4KvK9MxbF5WkVN3g8
+**Stuck, or want help connecting yours?** [Book a free call with Freya](https://calendar.app.google/4KvK9MxbF5WkVN3g8).

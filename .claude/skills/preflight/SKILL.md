@@ -80,4 +80,5 @@ For each fix, in order:
 - Don't fix, install or change anything before they say yes (step 3).
 - Never use `sudo`, and never ask for a password, API key or GitHub token in chat. Following along needs none.
 - Don't change any files in the repo except restoring missing folders.
+- Write every web address as a clickable markdown link, including any the check prints.
 - Don't give more than one command per box, or more than one command at a time in the one-at-a-time way.

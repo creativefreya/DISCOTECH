@@ -25,10 +25,10 @@ Write 3 subject lines for the first email, in the brand voice. Ask exactly this,
 | # | Journey | Trigger | Purpose |
 |---|---|---|---|
 | 1 | Nurture | Stage becomes `Lead` (send straight away) | Deliver the gift, using the chosen subject line |
-| 2 | Nurture | 2 days later | One genuinely useful tip |
-| 3 | Nurture | 4 days later | The offer, with its price, and a link to the product |
+| 2 | Nurture | 3 days later | One genuinely useful tip |
+| 3 | Nurture | 6 days later | The offer, with its price, and a link to the product |
 | 4 | Onboarding | Stage becomes `Customer` (send straight away) | Welcome, and what happens next |
-| 5 | Onboarding | 2 days later | Their first win: the step they just gave you |
+| 5 | Onboarding | 3 days later | Their first win: the step they just gave you |
 
 Use `{{first_name}}` in the greeting, the brand name as the sender, and `{{gift_link}}` or `{{product_link}}` where a link goes. Share useful tips without claiming facts or numbers you can't back up. Never invent testimonials, statistics or discounts.
 

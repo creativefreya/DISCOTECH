@@ -37,7 +37,7 @@ Never install, update or change anything. If something needs updating, tell them
 Keep it short and in plain English, in this order:
 
 - **Your repo:** ✅ or 🔴 for each check. For each 🔴, say how to fix it. If a real key leaked: make a new key at the provider first, because deleting the file doesn't un-leak it.
-- **Your laptop:** ✅, 🟡 for updates waiting, or "couldn't check". Include the fix.
+- **Your laptop:** ✅, 🟡 for updates waiting, or "couldn't check". Include the fix, with a clickable link if there's a download page.
 - **Being attacked right now:** the list from the check, in one line each, or "nothing for your setup in the last 30 days".
 - **Good habits:** turn on automatic updates. Run `/security-check` before every push. Keep keys in `.env` only. Auto mode blocks risky actions but doesn't guarantee safety, so still check anything sensitive.
 

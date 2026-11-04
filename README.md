@@ -1,6 +1,6 @@
 # An Unlikely Gameshow — build a business in under 90 minutes with AI
 
-Starter repo for Freya Stockman's talk at **DISCOTECH**. The room picks a business, votes on every big decision, and Claude Code builds it live: pain point → customers → brand → website → product → lead magnet → CRM → emails → security → checkout.
+Starter repo for Freya Stockman's talk at **DISCOTECH**. The room picks a business, votes on every big decision, and Claude Code builds it live: problem → product → price → name and brand → lead magnet → CRM → emails → security.
 
 > 🎁 **A gift from Freya, workshop or not.** You don't need a DISCOTECH ticket to use this. Clone it, build your own business in it, and make it yours.
 
