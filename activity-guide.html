@@ -211,17 +211,22 @@
     .blank { color: #ff8db2; background: rgba(215,38,96,0.16); border-radius: 4px; padding: 0 4px; }
     .picked { color: var(--accent-cyan); }
 
+    .chatbox__row { display: flex; align-items: center; gap: 10px; padding-right: 10px; }
+    .chatbox__row .chatbox__text { flex: 1; min-width: 0; min-height: 0; }
     .copy {
-      display: block;
-      width: 100%;
-      min-height: 50px;
-      margin-top: 10px;
+      flex: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 38px;
+      padding: 0 12px;
       border: none;
-      border-radius: 10px;
+      border-radius: 8px;
       background: var(--accent-cyan);
       color: var(--bg-primary);
       font-weight: 700;
-      font-size: 15px;
+      font-size: 13px;
+      white-space: nowrap;
       transition: background 0.15s;
     }
     .copy:hover { background: #8ef9ff; }
@@ -241,17 +246,16 @@
       margin-bottom: 8px;
     }
     .paste__mock-copy {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      min-height: 50px;
-      padding: 8px;
-      text-align: center;
-      border-radius: 10px;
+      gap: 6px;
+      min-height: 38px;
+      padding: 0 12px;
+      border-radius: 8px;
       background: var(--accent-cyan);
       color: var(--bg-primary);
       font-weight: 700;
-      font-size: 14px;
+      font-size: 13px;
     }
     .paste__arrow {
       text-align: center;
@@ -452,7 +456,7 @@
     .act__text { font-size: clamp(21px, 4.4vw, 28px); line-height: 44px; font-weight: 700; }
     .act__skill { color: var(--accent-cyan); font-family: 'JetBrains Mono', var(--mono-font); font-weight: 700; }
     .act__asks { margin-top: 4px; color: var(--text-muted); }
-    #get-latest .chatbox__text { min-height: 0; overflow-wrap: anywhere; font-family: 'JetBrains Mono', var(--mono-font); }
+    #get-latest .chatbox__text { font-family: 'JetBrains Mono', var(--mono-font); }
     .act__output { margin-top: 26px; padding-left: 60px; }
     .act__output-label { font-family: var(--pixel-font); font-size: 12px; color: var(--accent-cyan); margin-bottom: 10px; }
     .act__file { font-family: 'JetBrains Mono', var(--mono-font); font-size: 15px; overflow-wrap: anywhere; margin-top: 4px; }
@@ -664,7 +668,7 @@
         <div class="paste">
           <div>
             <p class="paste__col-label" style="color: var(--accent-cyan);">THIS PAGE</p>
-            <div class="paste__mock-copy">Copy prompt</div>
+            <div class="paste__mock-copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy</div>
           </div>
           <div class="paste__arrow" aria-hidden="true">→</div>
           <div>
@@ -874,7 +878,7 @@
     // ════════════════════════════════════════════════════════════════
 
     var LABELS = ['pink', 'cyan', 'purple', 'green'];
-    var COPY_ICON_TEXT = 'Copy prompt';
+    var COPY_ICON_TEXT = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy';
     var STORE_KEY = 'discotech-activity-guide';
 
     function esc(s) {
@@ -931,11 +935,11 @@
     function copyText(text, btn) {
       function show() {
         btn.classList.add('copy--done');
-        btn.textContent = btn.dataset.copied || '✓ Copied! Now paste it into Claude';
+        btn.textContent = '✓ Copied';
         clearTimeout(btn._t);
         btn._t = setTimeout(function() {
           btn.classList.remove('copy--done');
-          btn.textContent = btn.dataset.label || COPY_ICON_TEXT;
+          btn.innerHTML = COPY_ICON_TEXT;
         }, 2500);
       }
       function fallback() {
@@ -960,8 +964,8 @@
     function chatbox(innerHtml, id) {
       return '<div class="chatbox"><div class="chatbox__head"><span>Paste into Claude</span>' +
         '<span class="chatbox__folder">📁 DISCOTECH</span></div>' +
-        '<div class="chatbox__text"' + (id ? ' id="' + id + '"' : '') + '>' + innerHtml + '</div></div>' +
-        '<button class="copy" type="button" aria-live="polite">' + COPY_ICON_TEXT + '</button>';
+        '<div class="chatbox__row"><div class="chatbox__text"' + (id ? ' id="' + id + '"' : '') + '>' + innerHtml + '</div>' +
+        '<button class="copy" type="button" aria-live="polite">' + COPY_ICON_TEXT + '</button></div></div>';
     }
 
     // Fixed prompts in the page's own HTML (before you start, homework).
@@ -971,9 +975,6 @@
       var copyBtn = el.querySelector('.copy');
       if (el.hasAttribute('data-terminal')) {
         el.querySelector('.chatbox__head').innerHTML = '<span>Paste into your terminal</span>';
-        copyBtn.dataset.label = 'Copy command';
-        copyBtn.dataset.copied = '✓ Copied! Now paste it into your terminal';
-        copyBtn.textContent = copyBtn.dataset.label;
       }
       copyBtn.addEventListener('click', function() { copyText(text, this); });
     });
